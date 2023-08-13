@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import { Navbar, Welcome, Footer, Extras, Contact, PageNotFound, PrivacyPolicy, HeroImg } from './sections'
+import { Navbar, Welcome, Footer, Contact, PageNotFound, PrivacyPolicy, HeroImg } from './sections'
 import CookieBaner from './components/CookieBaner'
 
 const App = () => {
@@ -7,15 +7,30 @@ const App = () => {
 		<div className='min-h-screen'>
 			<div className='bg-gradient'>
 				<Navbar />
-				<HeroImg />
 				<Routes>
 					<Route
 						path='/'
 						element={
 							<>
+								<HeroImg />
+							</>
+						}
+					/>
+					<Route
+						path='/about'
+						element={
+							<>
 								<Welcome />
+								<Footer />
+							</>
+						}
+					/>
+					<Route
+						path='/contact'
+						element={
+							<>
 								<Contact />
-								<Extras />
+								<Footer />
 							</>
 						}
 					/>
@@ -24,6 +39,7 @@ const App = () => {
 						element={
 							<>
 								<PrivacyPolicy />
+								<Footer />
 							</>
 						}
 					/>
@@ -32,11 +48,11 @@ const App = () => {
 						element={
 							<>
 								<PageNotFound />
+								<Footer />
 							</>
 						}
 					/>
 				</Routes>
-				<Footer />
 			</div>
 			<CookieBaner />
 		</div>

@@ -5,32 +5,24 @@ import NavbarItem from '../components/NavbarItem'
 
 const Navbar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false)
-	const [colorChange, setColorChange] = useState(false)
 
 	const handleLogo = () => {
 		window.location.href = '/'
 	}
 
-	const changeNavbarColor = () => {
-		if (window.scrollY >= 80) {
-			setColorChange(true)
-		} else {
-			setColorChange(false)
-		}
-	}
-
-	window.addEventListener('scroll', changeNavbarColor)
-
 	return (
-		<nav className={`fixed top-0 w-full h-[80px] flex md:justify-center justify-between items-center p-4 z-10 ${colorChange ? 'bg-[#171616]' : 'bg-transparent'} transition duration-300`}>
+		<nav className='absolute top-0 w-full h-[80px] flex md:justify-center justify-between items-center p-4 z-10 transition duration-300'>
 			<div className='md:flex-[0.8] 2xl:flex-[0.5] flex-initial justify-center items-center'>
 				<div className='flex'>
-					<img src='/favicon.svg' alt='Logo that refreshes the page' className='mr-1'/>
-					<p className='cursor-pointer text-white uppercase' onClick={handleLogo}>konrad wojtyło</p>
+					<img src='/favicon.svg' alt='Logo that refreshes the page' className='mr-1' />
+					<p className='cursor-pointer text-white uppercase' onClick={handleLogo}>
+						konrad wojtyło
+					</p>
 				</div>
 			</div>
 			<ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initial'>
 				<NavbarItem title='home' section='/' />
+				<NavbarItem title='about' section='/about'/>
 				<NavbarItem title='contact' section='/contact' />
 				<NavbarItem title='policy' section='/privacy-policy' />
 			</ul>
@@ -56,6 +48,14 @@ const Navbar = () => {
 						<NavbarItem
 							title='home'
 							section='/'
+							classProps={'mb-5'}
+							onClick={() => {
+								setToggleMenu(false)
+							}}
+						/>
+						<NavbarItem
+							title='about'
+							section='/about'
 							classProps={'mb-5'}
 							onClick={() => {
 								setToggleMenu(false)

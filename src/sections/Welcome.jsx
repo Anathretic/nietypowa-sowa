@@ -3,7 +3,7 @@ import CardData from '../data/CardData'
 
 const Welcome = () => {
 	return (
-		<div className='flex w-full justify-center items-center'>
+		<div className='flex w-full justify-center items-center pt-[80px]'>
 			<div className='flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4'>
 				<div className='flex flex-1 justify-center items-center flex-col mf:mr-20'>
 					<h2 className='text-4xl sm:text-5xl text-white text-gradient py-1 max-rsm:text-left text-center min-[400px]:text-left'>
