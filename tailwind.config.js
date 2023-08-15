@@ -9,7 +9,7 @@ module.exports = {
 				mf: '990px',
 			},
 			backgroundImage: {
-				'hero-img': "url(/graffiti-bg.jpg)"
+				'hero-img': "url(/hero-bg.jpg)"
 			},
 			keyframes: {
 				'slide-in': {

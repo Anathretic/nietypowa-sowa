@@ -1,17 +1,17 @@
 const CardData = [
 	{
 		id: 1,
-		title: 'Rodzaj techniki',
+		title: 'Rysunek',
 		webHandle: '',
 	},
 	{
 		id: 2,
-		title: 'Rodzaj techniki',
+		title: 'Malarstwo',
 		webHandle: '',
 	},
 	{
 		id: 3,
-		title: 'Rodzaj techniki',
+		title: 'Areograf',
 		webHandle: '',
 	},
 ]

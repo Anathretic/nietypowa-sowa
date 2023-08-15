@@ -34,7 +34,7 @@ const Contact = () => {
 	}, [buttonText])
 
 	const changeText = () => {
-		setButtonText(<BsCheck2All color='#50eb02' fontSize={24} />)
+		setButtonText(<BsCheck2All color='#3373c6' fontSize={24} />)
 	}
 
 	const handleSubmit = async e => {
@@ -68,7 +68,7 @@ const Contact = () => {
 						}
 					})
 			: setIsLoading(false)
-		setErrorValue("Don't be a 🤖!")
+		setErrorValue("Nie bądź 🤖!")
 
 		// DEV ONLY BELOW - LOCAL DEBUG CAPTCHA
 
@@ -134,7 +134,7 @@ const Contact = () => {
 					</div>
 				</div>
 				<div className='flex flex-col flex-1 items-center justify-start w-full sm:w-96 mf:mt-0 mf:ml-18 lg:ml-20 mt-10'>
-				<form
+					<form
 						onSubmit={handleSubmit}
 						className='px-5 py-2 sm:w-96 w-full flex flex-col justify-start items-center blue-gradient mt-10'>
 						<h3 className='p-5 text-2xl text-white text-gradient'>Napisz do mnie!</h3>
@@ -173,7 +173,7 @@ const Contact = () => {
 							sitekey={import.meta.env.VITE_SITE_KEY}
 							ref={refCaptcha}
 						/>
-						<p className='mt-5 text-red-600 text-lg font-bold'>{errorValue}</p>
+						<p className='mt-5 text-[#ff91d8] text-lg font-bold'>{errorValue}</p>
 
 						<div className='h-[1px] w-full bg-gray-400 mt-6' />
 
@@ -182,7 +182,7 @@ const Contact = () => {
 						) : (
 							<button
 								type='submit'
-								className='flex flex-row justify-center items-center mt-5 mb-3 bg-[#b91c1c] p-3 w-32 rounded-full cursor-pointer hover:bg-[#7f1d1d] transition duration-300 text-white'>
+								className='flex flex-row justify-center items-center mt-5 mb-3 bg-[#ff91d8] p-3 w-32 rounded-full cursor-pointer hover:bg-[#bf589a] transition duration-300 text-white'>
 								{buttonText}
 							</button>
 						)}

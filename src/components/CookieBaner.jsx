@@ -8,7 +8,7 @@ const CookieBaner = () => {
 			buttonText='OK!'
 			style={{
 				color: '#fff',
-				backgroundColor: '#7f1d1d',
+				backgroundColor: '#bf589a',
 				fontSize: '12px',
 				padding: '10px',
 				textAlign: 'center',

@@ -1,4 +1,4 @@
-import { BsInstagram, BsFacebook } from 'react-icons/bs'
+import { BsInstagram } from 'react-icons/bs'
 import { FaRegCopyright } from 'react-icons/fa'
 
 const Footer = () => {
@@ -14,18 +14,11 @@ const Footer = () => {
 				</div>
 				<div className='flex flex-end '>
 					<a
-						className='cursor-pointer mr-6 sm:mr-8 p-1 hover:text-red-500 transition duration-300'
-						href='https://www.instagram.com/'
+						className='cursor-pointer  p-1 hover:text-[#ff91d8] transition duration-300'
+						href='https://www.instagram.com/nietypowa_sowa/'
 						target='_blank'
 						rel='noreferrer'>
 						<BsInstagram fontSize={22} />
-					</a>
-					<a
-						className='cursor-pointer p-1 hover:text-red-500 transition duration-300'
-						href='https://www.facebook.com/'
-						target='_blank'
-						rel='noreferrer'>
-						<BsFacebook fontSize={22} />
 					</a>
 				</div>
 			</div>

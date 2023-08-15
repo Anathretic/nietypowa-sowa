@@ -26,9 +26,7 @@ const Welcome = () => {
 						<CardItem
 							key={id + title}
 							title={id.title}
-							countdownMs={id.countdown}
 							webHandle={id.webHandle}
-							text={id.text}
 							bgImg={id.id}
 						/>
 					))}
