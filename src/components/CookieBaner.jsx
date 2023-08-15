@@ -25,9 +25,9 @@ const CookieBaner = () => {
 			}}
 			expires={1}>
 			<p className='max-[300px]:p-3 p-1'>
-				This site uses cookies only for technical purposes (e.g. google reCaptcha). Learn more from the{' '}
+				Ta strona używa plików cookie wyłącznie w celach technicznych (np. google reCaptcha). Dowiedz się więcej z{' '}
 				<Link to='/privacy-policy' className='text-amber-300 underline'>
-					privacy policy
+					polityki prywatności
 				</Link>
 				.
 			</p>

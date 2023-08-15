@@ -4,30 +4,32 @@ const PrivacyPolicy = () => {
 	return (
 		<div className='flex justify-center items-center flex-col min-h-[83vh] md:min-h-[90vh] p-5 text-white text-sm md:text-base pt-[120px]'>
 			<div className={policyBoxStyle}>
-				<p className='mb-3'>Data administrator</p>
+				<p className='mb-3 font-bold'>Administrator danych</p>
 				<p className='font-light'>
-					The data controller is <span className='font-normal'>Konrad Wojtyło</span>, owner of the website.
+					Administratorem Państwa danych jest <span className='font-bold'>Magdalena Sowa</span>, właściciel strony
+					Nietypowa Sowa.
 				</p>
 			</div>
 			<div className={policyBoxStyle}>
-				<p className='mb-3'>When do I collect your data?</p>
+				<p className='mb-3 font-bold'>Kiedy zbieram Twoje dane?</p>
 				<p className='font-light'>
-					User data (such as your e-mail address) is collected when you use the contact form only.
+					Dane użytkownika (takie jak adres e-mail) są gromadzone wyłącznie podczas korzystania z formularza
+					kontaktowego.
 				</p>
 			</div>
 			<div className={policyBoxStyle}>
-				<p className='mb-3'>How I process data?</p>
+				<p className='mb-3 font-bold'>Jak wygląda przepływ danych?</p>
 				<p className='font-light'>
-					Your data collected via the contact form is processed for contact purposes only. I do not share or sell them
-					to anyone.
+					Twoje dane zbierane poprzez formularz kontaktowy są przetwarzane wyłącznie w celach kontaktowych. Nikomu ich
+					nie udostępniam, ani nie sprzedaję.
 				</p>
-				<p className='font-light'>Use of the contact form is optional.</p>
+				<p className='font-light mt-2'>Korzystanie z formularza kontaktowego jest dobrowolne.</p>
 			</div>
 			<div className={policyBoxStyle}>
-				<p className='mb-3'>Other information</p>
+				<p className='mb-3 font-bold'>Pozostałe informacje</p>
 				<p className='font-light'>
-					If you have any further questions, please contact me at:{' '}
-					<span className='font-normal'>konrad.wojtylo.9@gmail.com</span>
+					W razie jakichkolwiek pytań proszę o kontakt na mój adres mailowy:{' '}
+					<span className='font-bold'>test@test.com</span>
 				</p>
 			</div>
 		</div>

@@ -1,17 +1,17 @@
 const CardData = [
 	{
 		id: 1,
-		title: 'Nietypowa-Sowa',
+		title: 'Rodzaj techniki',
 		webHandle: '',
 	},
 	{
 		id: 2,
-		title: 'Saints Arch&Dev',
+		title: 'Rodzaj techniki',
 		webHandle: '',
 	},
 	{
 		id: 3,
-		title: 'Mysterious Project',
+		title: 'Rodzaj techniki',
 		webHandle: '',
 	},
 ]

@@ -11,20 +11,20 @@ const Navbar = () => {
 	}
 
 	return (
-		<nav className='absolute top-0 w-full h-[80px] flex md:justify-center justify-between items-center p-4 z-10 transition duration-300'>
+		<nav className={`absolute top-0 w-full h-[80px] flex md:justify-center justify-between items-center p-4 z-10 transition duration-300`}>
 			<div className='md:flex-[0.8] 2xl:flex-[0.5] flex-initial justify-center items-center'>
 				<div className='flex'>
 					<img src='/favicon.svg' alt='Logo that refreshes the page' className='mr-1' />
 					<p className='cursor-pointer text-white uppercase' onClick={handleLogo}>
-						konrad wojtyło
+						nietypowa sowa
 					</p>
 				</div>
 			</div>
 			<ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initial'>
 				<NavbarItem title='home' section='/' />
-				<NavbarItem title='about' section='/about'/>
-				<NavbarItem title='contact' section='/contact' />
-				<NavbarItem title='policy' section='/privacy-policy' />
+				<NavbarItem title='oferta' section='/offer' />
+				<NavbarItem title='kontakt' section='/contact' />
+				<NavbarItem title='prywatność' section='/privacy-policy' />
 			</ul>
 			<div className='flex relative'>
 				{toggleMenu ? (
@@ -54,15 +54,15 @@ const Navbar = () => {
 							}}
 						/>
 						<NavbarItem
-							title='about'
-							section='/about'
+							title='oferta'
+							section='/offer'
 							classProps={'mb-5'}
 							onClick={() => {
 								setToggleMenu(false)
 							}}
 						/>
 						<NavbarItem
-							title='contact'
+							title='kontakt'
 							section='/contact'
 							classProps={'mb-5'}
 							onClick={() => {
@@ -70,7 +70,7 @@ const Navbar = () => {
 							}}
 						/>
 						<NavbarItem
-							title='policy'
+							title='prywatność'
 							section='/privacy-policy'
 							classProps={'mb-5'}
 							onClick={() => {

@@ -1,4 +1,4 @@
-import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import { BsInstagram, BsFacebook } from 'react-icons/bs'
 import { FaRegCopyright } from 'react-icons/fa'
 
 const Footer = () => {
@@ -10,22 +10,22 @@ const Footer = () => {
 			<div className='sm:w-[90%] w-full flex justify-between items-center my-5'>
 				<div className='flex'>
 					<FaRegCopyright className='mr-1 h-auto' />
-					<p className='text-sm text-center mf:text-base uppercase'> {currentYear} konrad wojtyło</p>
+					<p className='text-sm text-center mf:text-base uppercase'> {currentYear} nietypowa sowa</p>
 				</div>
 				<div className='flex flex-end '>
 					<a
 						className='cursor-pointer mr-6 sm:mr-8 p-1 hover:text-red-500 transition duration-300'
-						href='https://github.com/Anathretic/portfolio-page'
+						href='https://www.instagram.com/'
 						target='_blank'
 						rel='noreferrer'>
-						<BsGithub fontSize={22} />
+						<BsInstagram fontSize={22} />
 					</a>
 					<a
 						className='cursor-pointer p-1 hover:text-red-500 transition duration-300'
-						href='https://www.linkedin.com/in/konrad-wojtylo'
+						href='https://www.facebook.com/'
 						target='_blank'
 						rel='noreferrer'>
-						<BsLinkedin fontSize={22} />
+						<BsFacebook fontSize={22} />
 					</a>
 				</div>
 			</div>

@@ -3,9 +3,9 @@ const TextInputData = [
         id: 10,
         name: 'message',
         type: 'text',
-        placeholder: 'Enter your message..',
-        label: 'Message',
-        errorMessage: 'Should be 50-1000 characters!',
+        placeholder: 'Wprowadź wiadomość..',
+        label: 'Wiadomość',
+        errorMessage: 'Od 50 do 1000 znaków!',
         required: true,
     },
 ]

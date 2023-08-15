@@ -6,20 +6,21 @@ const App = () => {
 	return (
 		<div className='min-h-screen'>
 			<div className='bg-gradient'>
-				<Navbar />
 				<Routes>
 					<Route
 						path='/'
 						element={
 							<>
+								<Navbar />
 								<HeroImg />
 							</>
 						}
 					/>
 					<Route
-						path='/about'
+						path='/offer'
 						element={
 							<>
+								<Navbar />
 								<Welcome />
 								<Footer />
 							</>
@@ -29,6 +30,7 @@ const App = () => {
 						path='/contact'
 						element={
 							<>
+								<Navbar />
 								<Contact />
 								<Footer />
 							</>
@@ -38,6 +40,7 @@ const App = () => {
 						path='/privacy-policy'
 						element={
 							<>
+								<Navbar />
 								<PrivacyPolicy />
 								<Footer />
 							</>
@@ -47,6 +50,7 @@ const App = () => {
 						path='*'
 						element={
 							<>
+								<Navbar />
 								<PageNotFound />
 								<Footer />
 							</>

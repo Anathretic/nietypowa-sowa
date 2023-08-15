@@ -12,7 +12,7 @@ import { BsCheck2All } from 'react-icons/bs'
 const Contact = () => {
 	const [focused, setFocused] = useState(false)
 	const [isLoading, setIsLoading] = useState(false)
-	const [buttonText, setButtonText] = useState('Send')
+	const [buttonText, setButtonText] = useState('Wyślij')
 	const [errorValue, setErrorValue] = useState('')
 	const [values, setValues] = useState({
 		username: '',
@@ -25,7 +25,7 @@ const Contact = () => {
 	})
 	const isMobile = useMediaQuery({ query: '(max-width: 500px)' })
 	const refCaptcha = useRef(null)
-	const initialState = 'Send'
+	const initialState = 'Wyślij'
 
 	useEffect(() => {
 		if (buttonText !== initialState) {
@@ -121,27 +121,23 @@ const Contact = () => {
 	return (
 		<div className='flex w-full justify-center items-center pt-[80px]'>
 			<div className='flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4'>
-				<div className='flex flex-1 justify-center items-center flex-col mf:mr-20'>
-					<h2 className='text-4xl sm:text-5xl text-white text-gradient py-1 max-rsm:text-left text-center min-[400px]:text-left'>
-						Novice frontend <br /> developer with..
+				<div className='flex flex-1 justify-center items-center flex-col'>
+					<h2 className='text-4xl sm:text-5xl text-white text-gradient py-1 max-rsm:text-left text-center mf:text-left'>
+						Chciałbyś dowiedzieć się <br /> jak pracuję?
 						<br />
-						Fancy gradients!
+						A może.. <br /> interesuje Cię <br /> indywidualny projekt?
 					</h2>
 					<div className='text-left mt-5 text-white font-light text-base max-[350px]:text-left text-center mf:text-left'>
-						<p className='mt-2'>Currently working on several commercial projects..</p>
+						<p className='mt-2'>Spotkajmy się w mojej pracowni!</p>
 						<br />
-						<p>But I am still looking for a full time job!</p>
-						<br />
-						<p>Do you have any questions?</p>
-						<br />
-						<p className='mb-2'>Click the button below and contact me!</p>
+						<p className='mb-2'>Pamiętaj tylko, aby najpierw umówić się ze mną poprzez formularz :)</p>
 					</div>
 				</div>
-				<div className='flex flex-col flex-1 items-center justify-start w-full min-[500px]:w-96 mf:mt-0 mf:ml-18 lg:ml-20 mt-10'>
-					<form
+				<div className='flex flex-col flex-1 items-center justify-start w-full sm:w-96 mf:mt-0 mf:ml-18 lg:ml-20 mt-10'>
+				<form
 						onSubmit={handleSubmit}
 						className='px-5 py-2 sm:w-96 w-full flex flex-col justify-start items-center blue-gradient mt-10'>
-						<h3 className='p-5 text-2xl text-white text-gradient'>Contact me!</h3>
+						<h3 className='p-5 text-2xl text-white text-gradient'>Napisz do mnie!</h3>
 
 						<div className='h-[1px] w-full bg-gray-400 my-1' />
 
