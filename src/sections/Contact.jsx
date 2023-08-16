@@ -130,7 +130,7 @@ const Contact = () => {
 					<div className='text-left mt-5 text-white font-light text-base max-[350px]:text-left text-center mf:text-left'>
 						<p className='mt-2'>Spotkajmy się w mojej pracowni!</p>
 						<br />
-						<p className='mb-2'>Pamiętaj tylko, aby najpierw umówić się ze mną poprzez formularz :)</p>
+						<p className='mb-2'>Pamiętaj tylko, aby najpierw umówić się ze mną przez formularz!</p>
 					</div>
 				</div>
 				<div className='flex flex-col flex-1 items-center justify-start w-full sm:w-96 mf:mt-0 mf:ml-18 lg:ml-20 mt-10'>

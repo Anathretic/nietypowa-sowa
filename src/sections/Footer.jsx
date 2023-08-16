@@ -9,7 +9,7 @@ const Footer = () => {
 			<div className='sm:w-[90%] w-full h-[1px] bg-gray-400 mt-20' />
 			<div className='sm:w-[90%] w-full flex justify-between items-center my-5'>
 				<div className='flex'>
-					<FaRegCopyright className='mr-1 h-auto' />
+					<FaRegCopyright className='mx-1 h-auto' />
 					<p className='text-sm text-center mf:text-base uppercase'> {currentYear} nietypowa sowa</p>
 				</div>
 				<div className='flex flex-end '>
