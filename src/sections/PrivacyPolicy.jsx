@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
 				<p className='mb-3 font-bold'>Pozostałe informacje</p>
 				<p className='font-light'>
 					W razie jakichkolwiek pytań proszę o kontakt na mój adres mailowy:{' '}
-					<span className='font-bold'>test@test.com</span>
+					<span className='font-bold'>nietypowasowa@gmail.com</span>
 				</p>
 			</div>
 		</div>

@@ -11,10 +11,10 @@ const Navbar = () => {
 	}
 
 	return (
-		<nav className={`absolute top-0 w-full h-[80px] flex md:justify-center justify-between items-center p-4 z-10 transition duration-300`}>
+		<nav className={`absolute top-0 w-full h-[80px] flex md:justify-center justify-between items-center p-4 mf:p-2 z-10 transition duration-300`}>
 			<div className='md:flex-[0.8] 2xl:flex-[0.5] flex-initial justify-center items-center'>
 				<div className='flex items-center'>
-					<img src='/nietypowa-logo.png' alt='Logo that refreshes the page' className='mr-1 cursor-pointer' onClick={handleLogo}/>
+					<img src='src/images/nietypowa-logo.png' alt='Logo that refreshes the page' className='mr-1 cursor-pointer' onClick={handleLogo}/>
 				</div>
 			</div>
 			<ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initial'>

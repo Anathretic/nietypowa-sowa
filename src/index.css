@@ -62,15 +62,15 @@ nav {
 }
 
 .card-1 {
-	background-image: url('/first-technique-img.jpg');
+	background-image: url('src/images/first-technique-img.jpg');
 }
 
 .card-2 {
-	background-image: url('/second-technique-img.jpg');
+	background-image: url('src/images/second-technique-img.jpg');
 }
 
 .card-3 {
-	background-image: url('/third-technique-img.jpg');
+	background-image: url('src/images/third-technique-img.jpg');
 }
 
 .blue-gradient {

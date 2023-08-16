@@ -11,7 +11,7 @@ const CardData = [
 	},
 	{
 		id: 3,
-		title: 'Areograf',
+		title: 'Aerograf',
 		webHandle: '',
 	},
 ]
