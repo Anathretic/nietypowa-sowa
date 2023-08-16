@@ -25,15 +25,6 @@ nav {
 	transform: translate(-50%, -50%);
 }
 
-.hero-shadow {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgba(23, 22, 22, 0.85);
-}
-
 .bg-gradient {
 	background-color: rgb(211, 124, 177);
 	background-image: linear-gradient(140deg, rgba(211, 124, 177, 1) 0%, rgba(51, 115, 198, 1) 100%);

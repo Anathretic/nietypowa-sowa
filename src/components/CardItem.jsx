@@ -10,7 +10,7 @@ const CardItem = ({ title, webHandle, bgImg }) => {
 						className={
 							webHandle
 								? 'w-10 h-10 rounded-full border-2 border-white flex justify-center items-center text-white cursor-pointer hover:bg-[#ff91d8] transition duration-300'
-								: 'w-10 h-10 rounded-full border-2 border-white flex justify-center items-center text-white'
+								: 'w-10 h-10 rounded-full border-2 border-transparent flex justify-center items-center text-transparent'
 						}
 						href={webHandle ? webHandle : void 0}
 						target='_blank'
