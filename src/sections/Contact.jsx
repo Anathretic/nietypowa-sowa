@@ -121,7 +121,7 @@ const Contact = () => {
 	return (
 		<div className='flex w-full justify-center items-center pt-[80px]'>
 			<div className='flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4'>
-				<div className='flex flex-1 justify-center items-center flex-col'>
+				<div className='flex flex-1 justify-center items-center flex-col mf:ml-2'>
 					<h1 className='text-4xl sm:text-5xl text-white text-gradient py-1 max-rsm:text-left text-center mf:text-left'>
 						Chciałbyś dowiedzieć się <br /> jak pracuję?
 						<br />

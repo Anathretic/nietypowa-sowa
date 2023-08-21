@@ -37,7 +37,17 @@ const PrivacyPolicy = () => {
 			<div className={policyBoxStyle}>
 				<p className='mb-3 font-bold'>5. Projekt strony</p>
 				<p className='font-light'>
-					Za projekt i wykonanie strony odpowiada{' '}
+					Rozplanowanie i makieta:{' '}
+					<a
+						className='font-bold hover:text-[#ff91d8] transition duration-300'
+						href='https://www.linkedin.com/in/julia-hyz-098288274/'
+						target='_blank'
+						rel='noreferrer'>
+						Julia Hyz
+					</a>
+				</p>
+				<p className='font-light'>
+					Kod oraz małe poprawki graficzne:{' '}
 					<a
 						className='font-bold hover:text-[#ff91d8] transition duration-300'
 						href='https://konrad-wojtylo.com/'
@@ -45,7 +55,6 @@ const PrivacyPolicy = () => {
 						rel='noreferrer'>
 						Konrad Wojtyło
 					</a>
-					.
 				</p>
 			</div>
 		</div>

@@ -13,11 +13,11 @@ const Navbar = () => {
 	return (
 		<nav className='absolute top-0 w-screen h-[80px] flex md:justify-center justify-between items-center p-4 mf:p-2 z-10 transition duration-300'>
 			<div className='md:flex-[0.8] 2xl:flex-[0.5] flex-initial justify-center items-center'>
-				<div className='flex items-center mf:mx-4'>
+				<div className='flex items-center mf:mx-2'>
 					<img
 						src='/nietypowa-logo.png'
 						alt='Logo odświeżające stronę'
-						className='cursor-pointer sm:p-2'
+						className='cursor-pointer sm:p-2 mf:p-0'
 						onClick={handleLogo}
 					/>
 				</div>
