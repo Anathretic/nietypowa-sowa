@@ -2,7 +2,7 @@ const PageNotFound = () => {
 	return (
 		<div className='flex w-full justify-center items-center min-h-[600px] h-screen p-5 pt-[80px]'>
 			<div className='flex flex-col items-center justify-between md:p-20 py-16 px-4'>
-				<img src='/src/images/notfound-img.svg' alt='Error-404 image' className='w-[600px]' />
+				<img src='/notfound-img.svg' alt='Error-404 image' className='w-[600px]' />
 				<p className='text-white text-xs'>
 					Error 404 image by{' '}
 					<a
