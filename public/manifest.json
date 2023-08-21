@@ -1,0 +1,15 @@
+{
+	"name": "Nietypowa Sowa",
+	"description": "Grafik, projektant, miłośnik i entuzjasta sztuki",
+	"start_url": "https://nietypowa-sowa.pl",
+	"display": "standalone",
+	"theme_color": "#111111",
+	"background_color": "#222222",
+	"icons": [
+		{
+			"src": "favicon.ico",
+			"sizes": "24x24",
+			"type": "image/x-icon"
+		}
+	]
+}

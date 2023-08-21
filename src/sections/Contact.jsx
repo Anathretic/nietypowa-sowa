@@ -122,11 +122,11 @@ const Contact = () => {
 		<div className='flex w-full justify-center items-center pt-[80px]'>
 			<div className='flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4'>
 				<div className='flex flex-1 justify-center items-center flex-col'>
-					<h2 className='text-4xl sm:text-5xl text-white text-gradient py-1 max-rsm:text-left text-center mf:text-left'>
+					<h1 className='text-4xl sm:text-5xl text-white text-gradient py-1 max-rsm:text-left text-center mf:text-left'>
 						Chciałbyś dowiedzieć się <br /> jak pracuję?
 						<br />
 						A może.. <br /> interesuje Cię <br /> indywidualny projekt?
-					</h2>
+					</h1>
 					<div className='text-left mt-5 text-white font-light text-base max-[350px]:text-left text-center mf:text-left'>
 						<p className='mt-2'>Spotkajmy się w mojej pracowni!</p>
 						<br />
@@ -137,7 +137,7 @@ const Contact = () => {
 					<form
 						onSubmit={handleSubmit}
 						className='px-5 py-2 sm:w-96 w-full flex flex-col justify-start items-center blue-gradient mt-10'>
-						<h3 className='p-5 text-2xl text-white text-gradient'>Napisz do mnie!</h3>
+						<h2 className='p-5 text-2xl text-white text-gradient'>Napisz do mnie!</h2>
 
 						<div className='h-[1px] w-full bg-gray-400 my-1' />
 
