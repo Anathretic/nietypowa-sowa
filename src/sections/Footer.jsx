@@ -14,7 +14,7 @@ const Footer = () => {
 				</div>
 				<div className='flex flex-end '>
 					<a
-						className='cursor-pointer  p-1 hover:text-[#ff91d8] transition duration-300'
+						className='cursor-pointer p-1 hover:text-[#ff91d8] transition duration-300'
 						href='https://www.instagram.com/nietypowa_sowa/'
 						target='_blank'
 						rel='noreferrer'>

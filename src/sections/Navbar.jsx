@@ -11,14 +11,13 @@ const Navbar = () => {
 	}
 
 	return (
-		<nav
-			className={`absolute top-0 w-full h-[80px] flex md:justify-center justify-between items-center p-4 mf:p-2 z-10 transition duration-300`}>
+		<nav className='absolute top-0 w-screen h-[80px] flex md:justify-center justify-between items-center p-4 mf:p-2 z-10 transition duration-300'>
 			<div className='md:flex-[0.8] 2xl:flex-[0.5] flex-initial justify-center items-center'>
-				<div className='flex items-center'>
+				<div className='flex items-center mf:mx-4'>
 					<img
 						src='/nietypowa-logo.png'
 						alt='Logo odświeżające stronę'
-						className='mr-1 cursor-pointer'
+						className='cursor-pointer sm:p-2'
 						onClick={handleLogo}
 					/>
 				</div>
@@ -30,16 +29,10 @@ const Navbar = () => {
 				<NavbarItem title='prywatność' section='/privacy-policy' />
 			</ul>
 			<div className='flex relative'>
-				{toggleMenu ? (
-					<AiOutlineClose
-						fontSize={32}
-						className='text-white md:hidden cursor-pointer'
-						onClick={() => setToggleMenu(false)}
-					/>
-				) : (
+				{toggleMenu || (
 					<HiMenuAlt4
 						fontSize={32}
-						className='text-white md:hidden cursor-pointer'
+						className='text-white md:hidden cursor-pointer mx-2 sm:mx-4'
 						onClick={() => setToggleMenu(true)}
 					/>
 				)}
