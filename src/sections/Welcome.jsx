@@ -14,8 +14,8 @@ const Welcome = () => {
 					</div>
 				</div>
 				<div className='flex flex-col flex-1 items-center justify-start w-full sm:w-96 mf:mt-0 mf:ml-18 lg:ml-20 mt-10'>
-					{CardData.map((id, title) => (
-						<CardItem key={id + title} title={id.title} webHandle={id.webHandle} bgImg={id.id} />
+					{CardData.map(data => (
+						<CardItem key={data.id + data.title} title={data.title} webHandle={data.webHandle} bgImg={data.id} />
 					))}
 				</div>
 			</div>
