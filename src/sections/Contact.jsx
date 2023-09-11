@@ -1,12 +1,12 @@
 import { useEffect, useState, useRef } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import ReCAPTCHA from 'react-google-recaptcha'
-// import axios from 'axios' - only for DEV
-import InputData from '../data/InputData'
-import TextInputData from '../data/TextInputData'
 import emailjs from '@emailjs/browser'
+// import axios from 'axios' - only for DEV
+import { InputData } from '../data/InputData'
+import { TextInputData } from '../data/TextInputData'
 import { FormInput, TextInput } from '../components/Inputs'
-import Loader from '../components/Loader'
+import { Loader } from '../components/Loader'
 import { BsCheck2All } from 'react-icons/bs'
 
 const Contact = () => {
@@ -19,10 +19,10 @@ const Contact = () => {
 		email: '',
 		subject: '',
 	})
-
 	const [textValue, setTextValue] = useState({
 		message: '',
 	})
+
 	const isMobile = useMediaQuery({ query: '(max-width: 500px)' })
 	const refCaptcha = useRef(null)
 	const initialState = 'Wyślij'
@@ -68,7 +68,7 @@ const Contact = () => {
 						}
 					})
 			: setIsLoading(false)
-		setErrorValue("Nie bądź 🤖!")
+		setErrorValue('Nie bądź 🤖!')
 
 		// DEV ONLY BELOW - LOCAL DEBUG CAPTCHA
 

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const ButtonMailto = ({ mailto, label }) => {
+export const ButtonMailto = ({ mailto, label, classProps, ...otherProps }) => {
 	return (
 		<Link
 			to='#'
@@ -8,10 +8,9 @@ const ButtonMailto = ({ mailto, label }) => {
 				e.preventDefault()
 				window.location.href = mailto
 			}}
-			className='font-bold hover:text-[#ff91d8] transition duration-300'>
+			{...otherProps}
+			className={`font-bold hover:text-[#ff91d8] transition duration-300 ${classProps}`}>
 			{label}
 		</Link>
 	)
 }
-
-export default ButtonMailto

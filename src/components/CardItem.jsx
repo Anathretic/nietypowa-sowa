@@ -1,10 +1,9 @@
 import { FiChevronsRight } from 'react-icons/fi'
 
-const CardItem = ({ title, webHandle, bgImg }) => {
+export const CardItem = ({ title, webHandle, bgImg }) => {
 	return (
 		<div className='w-full'>
-			<div
-				className={`p-3 flex justify-end items-end flex-col rounded-xl h-60 sm:w-96 my-3 card-${bgImg}`}>
+			<div className={`p-3 flex justify-end items-end flex-col rounded-xl h-60 sm:w-96 my-3 card-${bgImg}`}>
 				<div className='flex justify-between items-start'>
 					<a
 						className={
@@ -25,5 +24,3 @@ const CardItem = ({ title, webHandle, bgImg }) => {
 		</div>
 	)
 }
-
-export default CardItem

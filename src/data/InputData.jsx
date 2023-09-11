@@ -1,4 +1,4 @@
-const InputData = [
+export const InputData = [
 	{
 		id: 7,
 		name: 'username',
@@ -29,5 +29,3 @@ const InputData = [
 		required: true,
 	},
 ]
-
-export default InputData
