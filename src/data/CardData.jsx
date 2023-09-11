@@ -1,4 +1,4 @@
-const CardData = [
+export const CardData = [
 	{
 		id: 1,
 		title: 'Rysunek',
@@ -15,5 +15,3 @@ const CardData = [
 		webHandle: '',
 	},
 ]
-
-export default CardData

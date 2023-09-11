@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import CookieConsent from 'react-cookie-consent'
 
-const CookieBaner = () => {
+export const CookieBaner = ({ ...otherProps }) => {
 	return (
 		<CookieConsent
 			location='bottom'
@@ -23,7 +23,8 @@ const CookieBaner = () => {
 				width: '100px',
 				borderRadius: '8px',
 			}}
-			expires={1}>
+			expires={1}
+			{...otherProps}>
 			<p className='max-[300px]:p-3 p-1'>
 				Ta strona używa plików cookie wyłącznie w celach technicznych (np. google reCaptcha). Dowiedz się więcej z{' '}
 				<Link to='/privacy-policy' className='text-amber-300 underline'>
@@ -34,5 +35,3 @@ const CookieBaner = () => {
 		</CookieConsent>
 	)
 }
-
-export default CookieBaner

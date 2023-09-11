@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
-import { Navbar, Welcome, Footer, Contact, PageNotFound, PrivacyPolicy, HeroImg } from './sections'
-import CookieBaner from './components/CookieBaner'
+import { Navbar, Offer, Footer, Contact, PageNotFound, PrivacyPolicy, Home } from './sections'
+import { CookieBaner } from './components/CookieBaner'
 
 const App = () => {
 	return (
@@ -12,7 +12,7 @@ const App = () => {
 						path='/'
 						element={
 							<>
-								<HeroImg />
+								<Home />
 							</>
 						}
 					/>
@@ -20,7 +20,7 @@ const App = () => {
 						path='/offer'
 						element={
 							<>
-								<Welcome />
+								<Offer />
 								<Footer />
 							</>
 						}
