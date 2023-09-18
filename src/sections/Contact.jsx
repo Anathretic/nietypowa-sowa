@@ -31,6 +31,7 @@ const Contact = () => {
 		if (buttonText !== initialState) {
 			setTimeout(() => setButtonText(initialState), 2500)
 		}
+		return () => clearTimeout(buttonText)
 	}, [buttonText])
 
 	const changeText = () => {

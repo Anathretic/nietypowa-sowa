@@ -3,6 +3,25 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { HiMenuAlt4 } from 'react-icons/hi'
 import { NavbarItem } from '../components/NavbarItem'
 
+const navbarItems = [
+	{
+		title: 'home',
+		section: '/',
+	},
+	{
+		title: 'oferta',
+		section: '/offer',
+	},
+	{
+		title: 'kontakt',
+		section: '/contact',
+	},
+	{
+		title: 'prywatność',
+		section: '/privacy-policy',
+	},
+]
+
 const Navbar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false)
 
@@ -23,10 +42,9 @@ const Navbar = () => {
 				</div>
 			</div>
 			<ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initial'>
-				<NavbarItem title='home' section='/' />
-				<NavbarItem title='oferta' section='/offer' />
-				<NavbarItem title='kontakt' section='/contact' />
-				<NavbarItem title='prywatność' section='/privacy-policy' />
+				{navbarItems.map(({ title, section }) => (
+					<NavbarItem key={title} title={title} section={section} />
+				))}
 			</ul>
 			<div className='flex relative'>
 				{toggleMenu || (
@@ -41,38 +59,17 @@ const Navbar = () => {
 						<li className='text-xl self-start my-2 cursor-pointer'>
 							<AiOutlineClose fontSize={28} onClick={() => setToggleMenu(false)} />
 						</li>
-						<NavbarItem
-							title='home'
-							section='/'
-							classProps={'mb-5'}
-							onClick={() => {
-								setToggleMenu(false)
-							}}
-						/>
-						<NavbarItem
-							title='oferta'
-							section='/offer'
-							classProps={'mb-5'}
-							onClick={() => {
-								setToggleMenu(false)
-							}}
-						/>
-						<NavbarItem
-							title='kontakt'
-							section='/contact'
-							classProps={'mb-5'}
-							onClick={() => {
-								setToggleMenu(false)
-							}}
-						/>
-						<NavbarItem
-							title='prywatność'
-							section='/privacy-policy'
-							classProps={'mb-5'}
-							onClick={() => {
-								setToggleMenu(false)
-							}}
-						/>
+						{navbarItems.map(({ title, section }) => (
+							<NavbarItem
+								key={title}
+								title={title}
+								section={section}
+								classProps={'mb-5'}
+								onClick={() => {
+									setToggleMenu(false)
+								}}
+							/>
+						))}
 					</ul>
 				)}
 			</div>
