@@ -8,7 +8,7 @@ export const ScrollToTop = () => {
 		const body = document.querySelector('#root');
 		body.scrollIntoView(
 			{
-				behavior: 'auto',
+				behavior: 'smooth',
 			},
 			100
 		);
