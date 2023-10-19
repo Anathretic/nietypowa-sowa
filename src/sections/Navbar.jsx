@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import { AiOutlineClose } from 'react-icons/ai'
-import { HiMenuAlt4 } from 'react-icons/hi'
-import { NavbarItem } from '../components/NavbarItem'
+import { useState } from 'react';
+import { AiOutlineClose } from 'react-icons/ai';
+import { HiMenuAlt4 } from 'react-icons/hi';
+import { NavbarItem } from '../components/NavbarItem';
 
 const navbarItems = [
 	{
@@ -20,14 +20,14 @@ const navbarItems = [
 		title: 'prywatność',
 		section: '/privacy-policy',
 	},
-]
+];
 
 const Navbar = () => {
-	const [toggleMenu, setToggleMenu] = useState(false)
+	const [toggleMenu, setToggleMenu] = useState(false);
 
 	const handleLogo = () => {
-		window.location.href = '/'
-	}
+		window.location.href = '/';
+	};
 
 	return (
 		<nav className='absolute top-0 w-screen h-[80px] flex md:justify-center justify-between items-center p-4 mf:p-2 z-10 transition duration-300'>
@@ -66,7 +66,7 @@ const Navbar = () => {
 								section={section}
 								classProps={'mb-5'}
 								onClick={() => {
-									setToggleMenu(false)
+									setToggleMenu(false);
 								}}
 							/>
 						))}
@@ -74,7 +74,7 @@ const Navbar = () => {
 				)}
 			</div>
 		</nav>
-	)
-}
+	);
+};
 
-export default Navbar
+export default Navbar;

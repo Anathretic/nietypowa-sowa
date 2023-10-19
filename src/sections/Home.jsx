@@ -5,7 +5,7 @@ const Home = () => {
 				Nietypowa Sowa
 			</h1>
 		</div>
-	)
-}
+	);
+};
 
-export default Home
+export default Home;
