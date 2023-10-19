@@ -10,15 +10,15 @@ const navbarItems = [
 	},
 	{
 		title: 'oferta',
-		section: '/offer',
+		section: '/oferta',
 	},
 	{
 		title: 'kontakt',
-		section: '/contact',
+		section: '/kontakt',
 	},
 	{
 		title: 'prywatność',
-		section: '/privacy-policy',
+		section: '/polityka-prywatnosci',
 	},
 ];
 

@@ -15,7 +15,7 @@ const Offer = () => {
 				</div>
 				<div className='flex flex-col flex-1 items-center justify-start w-full sm:w-96 mf:mt-0 mf:ml-18 lg:ml-20 mt-10'>
 					{CardData.map(data => (
-						<CardItem key={data.id + data.title} title={data.title} webHandle={data.webHandle} bgImg={data.id} />
+						<CardItem key={data.id + data.title} id={data.id} path={data.path} title={data.title} />
 					))}
 				</div>
 			</div>
