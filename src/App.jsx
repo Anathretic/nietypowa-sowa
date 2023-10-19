@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Navbar, Offer, Footer, Contact, PageNotFound, PrivacyPolicy, Home } from './sections';
 import { CookieBaner } from './components/CookieBaner';
 import { ScrollToTop } from './utils/ScrollToTop';
+import { Photos } from './sections/Photos';
 
 const App = () => {
 	return (
@@ -19,7 +20,7 @@ const App = () => {
 						}
 					/>
 					<Route
-						path='/offer'
+						path='/oferta'
 						element={
 							<>
 								<Offer />
@@ -28,7 +29,16 @@ const App = () => {
 						}
 					/>
 					<Route
-						path='/contact'
+						path='/oferta/:id'
+						element={
+							<>
+								<Photos />
+								<Footer />
+							</>
+						}
+					/>
+					<Route
+						path='/kontakt'
 						element={
 							<>
 								<Contact />
@@ -37,7 +47,7 @@ const App = () => {
 						}
 					/>
 					<Route
-						path='/privacy-policy'
+						path='/polityka-prywatnosci'
 						element={
 							<>
 								<PrivacyPolicy />
