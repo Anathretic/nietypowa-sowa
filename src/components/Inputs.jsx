@@ -1,30 +1,33 @@
 const inputStyles =
-	'my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-gradient'
+	'my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-gradient';
 
-const FormInput = ({ label, onChange, errorMessage, ...inputProps }) => {
+export const FormInput = ({ label, htmlFor, onChange, errorMessage, ...inputProps }) => {
 	return (
 		<div className='w-full flex flex-col justify-center items-center'>
-			<label className='text-white mt-5'>{label}:</label>
-			<input className={`${inputStyles}`} {...inputProps} onChange={onChange} />
+			<label htmlFor={htmlFor} className='text-white mt-5'>
+				{label}:
+			</label>
+			<input className={`${inputStyles}`} onChange={onChange} autoComplete='off' {...inputProps} />
 			<span className='text-center'>{errorMessage}</span>
 		</div>
-	)
-}
+	);
+};
 
-const TextInput = ({ label, onChange, errorMessage, ...textProps }) => {
+export const FormTextarea = ({ label, htmlFor, onChange, errorMessage, ...textareaProps }) => {
 	return (
 		<div className='w-full flex flex-col justify-center items-center'>
-			<label className='text-white mt-5'>{label}:</label>
+			<label htmlFor={htmlFor} className='text-white mt-5'>
+				{label}:
+			</label>
 			<textarea
 				className={`min-h-[96px] max-h-[256px] ${inputStyles}`}
-				{...textProps}
 				onChange={onChange}
 				minLength={50}
-				maxLength={1000}
+				maxLength={1500}
+				autoComplete='off'
+				{...textareaProps}
 			/>
 			<span className='text-center'>{errorMessage}</span>
 		</div>
-	)
-}
-
-export { FormInput, TextInput }
+	);
+};

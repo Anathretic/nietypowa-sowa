@@ -1,133 +1,82 @@
-import { useEffect, useState, useRef } from 'react'
-import { useMediaQuery } from 'react-responsive'
-import ReCAPTCHA from 'react-google-recaptcha'
-import emailjs from '@emailjs/browser'
-// import axios from 'axios' - only for DEV
-import { InputData } from '../data/InputData'
-import { TextInputData } from '../data/TextInputData'
-import { FormInput, TextInput } from '../components/Inputs'
-import { Loader } from '../components/Loader'
-import { BsCheck2All } from 'react-icons/bs'
+import { useState, useRef } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import ReCAPTCHA from 'react-google-recaptcha';
+import emailjs from '@emailjs/browser';
+
+import { InputData } from '../data/InputData';
+import { TextareaData } from '../data/TextareaData';
+import { FormInput, FormTextarea } from '../components/Inputs';
+import { Loader } from '../components/Loader';
+import { BsCheck2All } from 'react-icons/bs';
+
+import { useContactFormButton } from '../hooks/useContactFormButton';
+import { useContactFormInputs } from '../hooks/useContactFormInputs';
 
 const Contact = () => {
-	const [focused, setFocused] = useState(false)
-	const [isLoading, setIsLoading] = useState(false)
-	const [buttonText, setButtonText] = useState('Wyślij')
-	const [errorValue, setErrorValue] = useState('')
-	const [values, setValues] = useState({
-		username: '',
-		email: '',
-		subject: '',
-	})
-	const [textValue, setTextValue] = useState({
-		message: '',
-	})
+	const [focused, setFocused] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
+	const [errorValue, setErrorValue] = useState('');
 
-	const isMobile = useMediaQuery({ query: '(max-width: 500px)' })
-	const refCaptcha = useRef(null)
-	const initialState = 'Wyślij'
+	const [values, setValues, handleInputValue] = useContactFormInputs();
+	const [buttonText, setButtonText] = useContactFormButton();
+	const isMobile = useMediaQuery({ query: '(max-width: 500px)' });
 
-	useEffect(() => {
-		if (buttonText !== initialState) {
-			setTimeout(() => setButtonText(initialState), 2500)
-		}
-		return () => clearTimeout(buttonText)
-	}, [buttonText])
-
-	const changeText = () => {
-		setButtonText(<BsCheck2All color='#3373c6' fontSize={24} />)
-	}
+	const refCaptcha = useRef(null);
 
 	const handleSubmit = async e => {
-		e.preventDefault()
+		e.preventDefault();
 
-		setIsLoading(true)
-		const token = await refCaptcha.current.getValue()
-		refCaptcha.current.reset()
+		setIsLoading(true);
+		setErrorValue('');
+		const token = await refCaptcha.current.getValue();
+		refCaptcha.current.reset();
 
 		const params = {
 			...values,
-			...textValue,
 			'g-recaptcha-response': token,
+		};
+
+		if (token) {
+			const sendMsg = emailjs
+				.send(
+					`${import.meta.env.VITE_SERVICE_ID}`,
+					`${import.meta.env.VITE_TEMPLATE_ID}`,
+					params,
+					`${import.meta.env.VITE_PUBLIC_KEY}`
+				)
+				.then(
+					function () {
+						setValues({ username: '', email: '', subject: '', message: '' });
+						setButtonText(<BsCheck2All color='#3373c6' fontSize={24} />);
+					},
+					function () {
+						setErrorValue('Coś poszło nie tak..');
+					}
+				)
+				.finally(() => {
+					setFocused(false);
+					setIsLoading(false);
+				});
+			return sendMsg;
+		} else {
+			setIsLoading(false);
+			setErrorValue('Nie bądź 🤖!');
 		}
-
-		token
-			? emailjs
-					.send(
-						`${import.meta.env.VITE_SERVICE_ID}`,
-						`${import.meta.env.VITE_TEMPLATE_ID}`,
-						params,
-						`${import.meta.env.VITE_PUBLIC_KEY}`
-					)
-					.then(res => {
-						if (res.status === 200) {
-							setValues({ username: '', email: '', subject: '' }), setTextValue({ message: '' })
-							setFocused(false)
-							setIsLoading(false)
-							setErrorValue('')
-							changeText()
-						}
-					})
-			: setIsLoading(false)
-		setErrorValue('Nie bądź 🤖!')
-
-		// DEV ONLY BELOW - LOCAL DEBUG CAPTCHA
-
-		// await axios
-		// 	.post(`http://localhost:${import.meta.env.VITE_PORT}/post`, { token })
-		// 	.then(res => {
-		// 		console.log(res)
-		// 		if (res.data === 'Human 👨 👩') {
-		// 			// DEV
-		// 			//emailjs requires your IDs and keys !!!!!!!
-
-		// 			emailjs
-		// 				.sendForm(
-		// 					`${import.meta.env.VITE_SERVICE_ID}`,
-		// 					`${import.meta.env.VITE_TEMPLATE_ID}`,
-		// 					e.target,
-		// 					`${import.meta.env.VITE_PUBLIC_KEY}`
-		// 				)
-		// 				.then(res => {
-		// 					if (res.status === 200) {
-		// 						setValues({ username: '', email: '', subject: '' }), setTextValue({ message: '' })
-		// 						setFocused(false)
-		// 						setIsLoading(false)
-		// 						setErrorValue('')
-		// 						changeText()
-		// 					}
-		// 				})
-		// 				.catch(error => {
-		// 					console.log(error.text)
-		// 				})
-		// 		} else if (res.data === 'Robot 🤖') {
-		// 			setIsLoading(false)
-		// 			setErrorValue("Don't be a 🤖!")
-		// 		}
-		// 	})
-		// 	.catch(error => {
-		// 		console.log(error)
-		// 	})
-	}
-
-	const onChange = e => {
-		setValues({ ...values, [e.target.name]: e.target.value })
-		setTextValue({ ...textValue, [e.target.name]: e.target.value })
-	}
+	};
 
 	const handleFocus = () => {
-		setFocused(true)
-	}
+		setFocused(true);
+	};
 
 	return (
 		<div className='flex w-full justify-center items-center pt-[80px]'>
 			<div className='flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4'>
 				<div className='flex flex-1 justify-center items-center flex-col mf:ml-2'>
-					<h1 className='text-4xl sm:text-5xl text-white text-gradient py-1 max-rsm:text-left text-center mf:text-left'>
+					<h2 className='text-4xl sm:text-5xl text-white text-gradient py-1 max-rsm:text-left text-center mf:text-left'>
 						Chciałbyś dowiedzieć się <br /> jak pracuję?
 						<br />
 						A może.. <br /> interesuje Cię <br /> indywidualny projekt?
-					</h1>
+					</h2>
 					<div className='text-left mt-5 text-white font-light text-base max-[350px]:text-left text-center mf:text-left'>
 						<p className='mt-2'>Spotkajmy się w mojej pracowni!</p>
 						<br />
@@ -139,34 +88,29 @@ const Contact = () => {
 						onSubmit={handleSubmit}
 						className='px-5 py-2 sm:w-96 w-full flex flex-col justify-start items-center blue-gradient mt-10'>
 						<h2 className='p-5 text-2xl text-white text-gradient'>Napisz do mnie!</h2>
-
 						<div className='h-[1px] w-full bg-gray-400 my-1' />
-
 						{InputData.map(input => (
 							<FormInput
 								key={input.id}
+								htmlFor={input.name}
 								{...input}
 								value={values[input.name]}
-								onChange={onChange}
+								onChange={handleInputValue}
 								onInvalid={handleFocus}
 								focused={focused.toString()}
 							/>
 						))}
-
-						{TextInputData.map(text => (
-							<TextInput
+						{TextareaData.map(text => (
+							<FormTextarea
 								key={text.id}
+								htmlFor={text.name}
 								{...text}
-								value={textValue[text.name]}
-								onChange={onChange}
+								value={values[text.name]}
+								onChange={handleInputValue}
 								onInvalid={handleFocus}
 								focused={focused.toString()}
 							/>
 						))}
-
-						{/* DEV */}
-						{/* ReCAPTCHA sitekey requires your Google Captcha API Key */}
-
 						<ReCAPTCHA
 							key={isMobile ? 'compact-recaptcha' : 'normal-recaptcha'}
 							size={isMobile ? 'compact' : 'normal'}
@@ -175,9 +119,7 @@ const Contact = () => {
 							ref={refCaptcha}
 						/>
 						<p className='mt-5 text-[#ff91d8] text-lg font-bold'>{errorValue}</p>
-
 						<div className='h-[1px] w-full bg-gray-400 mt-6' />
-
 						{isLoading ? (
 							<Loader />
 						) : (
@@ -191,7 +133,7 @@ const Contact = () => {
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default Contact
+export default Contact;

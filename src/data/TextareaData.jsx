@@ -1,11 +1,11 @@
-export const TextInputData = [
+export const TextareaData = [
 	{
-		id: 10,
+		id: 'message',
 		name: 'message',
 		type: 'text',
 		placeholder: 'Wprowadź wiadomość..',
 		label: 'Wiadomość',
-		errorMessage: 'Od 50 do 1000 znaków!',
+		errorMessage: 'Rozpisz się! Ale tak do 300 słów..',
 		required: true,
 	},
-]
+];

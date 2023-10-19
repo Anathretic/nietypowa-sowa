@@ -1,7 +1,7 @@
-import { ButtonMailto } from '../utils/ButtonMailto'
+import { MailToButton } from '../components/MailToButton';
 
 const PrivacyPolicy = () => {
-	const policyBoxStyle = 'p-3 mt-5 max-[360px]:w-full w-9/12 md:w-2/3 lg:w-1/2'
+	const policyBoxStyle = 'p-3 mt-5 max-[360px]:w-full w-9/12 md:w-2/3 lg:w-1/2';
 
 	return (
 		<div className='flex justify-center items-center flex-col min-h-[83vh] md:min-h-[90vh] p-5 text-white text-sm md:text-base pt-[120px]'>
@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
 				<p className='mb-3 font-bold'>4. Pozostałe informacje</p>
 				<p className='font-light'>
 					W razie jakichkolwiek pytań proszę o kontakt na mój adres mailowy:{' '}
-					<ButtonMailto label='nietypowasowa@gmail.com' mailto='mailto:nietypowasowa@gmail.com' />
+					<MailToButton label='nietypowasowa@gmail.com' mailto='mailto:nietypowasowa@gmail.com' />
 				</p>
 			</div>
 			<div className={policyBoxStyle}>
@@ -58,7 +58,7 @@ const PrivacyPolicy = () => {
 				</p>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default PrivacyPolicy
+export default PrivacyPolicy;

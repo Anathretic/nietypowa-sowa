@@ -1,8 +1,8 @@
-import { BsInstagram } from 'react-icons/bs'
-import { FaRegCopyright } from 'react-icons/fa'
+import { BsInstagram } from 'react-icons/bs';
+import { FaRegCopyright } from 'react-icons/fa';
 
 const Footer = () => {
-	const currentYear = new Date().getFullYear()
+	const currentYear = new Date().getFullYear();
 
 	return (
 		<div className='w-full flex md:justify-center justify-between items-center flex-col p-4 text-white'>
@@ -23,7 +23,7 @@ const Footer = () => {
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default Footer
+export default Footer;

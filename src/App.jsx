@@ -1,11 +1,13 @@
-import { Route, Routes } from 'react-router-dom'
-import { Navbar, Offer, Footer, Contact, PageNotFound, PrivacyPolicy, Home } from './sections'
-import { CookieBaner } from './components/CookieBaner'
+import { Route, Routes } from 'react-router-dom';
+import { Navbar, Offer, Footer, Contact, PageNotFound, PrivacyPolicy, Home } from './sections';
+import { CookieBaner } from './components/CookieBaner';
+import { ScrollToTop } from './utils/ScrollToTop';
 
 const App = () => {
 	return (
 		<div className='min-h-screen'>
 			<div className='bg-gradient'>
+				<ScrollToTop />
 				<Navbar />
 				<Routes>
 					<Route
@@ -56,7 +58,7 @@ const App = () => {
 			</div>
 			<CookieBaner />
 		</div>
-	)
-}
+	);
+};
 
-export default App
+export default App;

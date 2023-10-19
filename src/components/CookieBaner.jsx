@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import CookieConsent from 'react-cookie-consent'
+import { Link } from 'react-router-dom';
+import CookieConsent from 'react-cookie-consent';
 
 export const CookieBaner = ({ ...otherProps }) => {
 	return (
@@ -33,5 +33,5 @@ export const CookieBaner = ({ ...otherProps }) => {
 				.
 			</p>
 		</CookieConsent>
-	)
-}
+	);
+};

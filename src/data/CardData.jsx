@@ -14,4 +14,4 @@ export const CardData = [
 		title: 'Aerograf',
 		webHandle: '',
 	},
-]
+];
