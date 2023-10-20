@@ -16,6 +16,6 @@ The code is refactored and divided into components and custom hooks.
 
 **Used:** HTML, CSS, JavaScript, React, Node + Express, Tailwind, Vite
 
-**Tools:** emailJS, Google reCaptcha
+**Tools:** [EmailJS](https://www.emailjs.com/), [Google reCaptcha](https://www.google.com/recaptcha/about/)
 
 **URL:** [Nietypowa Sowa](https://nietypowa-sowa.pl/)
