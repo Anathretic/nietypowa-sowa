@@ -9,7 +9,8 @@ export const CardData = [
 				image: '/first-technique-images/first-image-1.jpg',
 				alt: 'Obraz przedstawiający zamyśloną kobietę wpatrzoną w okno',
 				title: 'Delikatna Wiśnia',
-				description: 'Rysunek przedstawiający zamyśloną kobietę wpatrzoną w okno. Został wykonany suchymi pastelami oraz węglem na brązowym papierze. ',
+				description:
+					'Rysunek przedstawiający zamyśloną kobietę wpatrzoną w okno. Został wykonany suchymi pastelami oraz węglem na brązowym papierze.',
 				size: '50x70cm',
 				year: '2021',
 			},
@@ -19,7 +20,7 @@ export const CardData = [
 				alt: 'Obraz przedstawiający dwie dłonie splecione w uścisku',
 				title: 'Dłonie',
 				description:
-					'Dłonie to niedocenione części naszego ciała, ponieważ można z nich, jak z oczu, zobaczyć w jakich emocjach jesteśmy. Rysunek wykonany suchymi pastelami na brązowym papierze.  ',
+					'Dłonie to niedocenione części naszego ciała, ponieważ można z nich, jak z oczu, zobaczyć w jakich emocjach jesteśmy. Rysunek wykonany suchymi pastelami na brązowym papierze.',
 				size: '50x70cm',
 				year: '2020',
 			},
@@ -55,7 +56,8 @@ export const CardData = [
 				image: '/second-technique-images/second-image-1.jpg',
 				alt: 'Trampki przyozdobione grafiką o tematyce spadochroniarstwa',
 				title: 'Custom Vans’ów',
-				description: 'Grafika przedstawiająca spadochroniarzy lecących w stronę zachodu słońca. Buty zostały pomalowane farbami angleus.',
+				description:
+					'Grafika przedstawiająca spadochroniarzy lecących w stronę zachodu słońca. Buty zostały pomalowane farbami angelus.',
 				size: '',
 				year: '2022',
 			},
@@ -73,7 +75,8 @@ export const CardData = [
 				image: '/second-technique-images/second-image-3.jpg',
 				alt: 'Trampki przyozdobione grafiką o tematyce spadochroniarstwa',
 				title: 'Custom Vans’ów v2.0',
-				description: 'Grafika przedstawiająca spadochroniarzy, którzy układają się w różne figury. Buty zostały pomalowane farbami angleus.',
+				description:
+					'Grafika przedstawiająca spadochroniarzy, którzy układają się w różne figury. Buty zostały pomalowane farbami angelus.',
 				size: '',
 				year: '2022',
 			},
@@ -82,7 +85,8 @@ export const CardData = [
 				image: '/second-technique-images/second-image-4.jpg',
 				alt: 'Obraz przedstawiający martwą naturę',
 				title: 'Martwa natura z torebką',
-				description: 'Poprzez zróżnicowanie światła i emocji martwa natura potrafi nauczyć nas wszystkiego. Obraz namalowany farbami olejnymi na tekturze.',
+				description:
+					'Poprzez zróżnicowanie światła i emocji martwa natura potrafi nauczyć nas wszystkiego. Obraz namalowany farbami olejnymi na tekturze.',
 				size: '100x70cm',
 				year: '2022',
 			},
@@ -92,7 +96,7 @@ export const CardData = [
 				alt: 'Trampki przyozdobione grafiką przedstawiającą postacie z bajek oraz narzędzia',
 				title: 'Bajkowe trampki',
 				description:
-					'Trampki wykonane dla mojego taty, który ciągle ogląda bajki. Mała dygresja? W każdym dorosłym drzemie wewnętrze dziecko, które należy pielęgnować. Namalowane farbami angellus. ',
+					'Trampki wykonane dla mojego taty, który ciągle ogląda bajki. Mała dygresja? W każdym dorosłym drzemie wewnętrze dziecko, które należy pielęgnować. Namalowane farbami angelus.',
 				size: '',
 				year: '2022',
 			},
