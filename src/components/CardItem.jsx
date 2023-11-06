@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FiChevronsRight } from 'react-icons/fi';
-import { scrollToTop } from '../utils/scrollToTop';
+import { scrollToTop } from '../utils/scrollToTopUtils';
 
 export const CardItem = ({ id, path, title }) => {
 	return (
