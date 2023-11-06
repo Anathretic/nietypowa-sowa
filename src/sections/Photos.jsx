@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { usePhotos } from '../hooks/usePhotos';
 import PageNotFound from './PageNotFound';
-import { scrollToTop } from '../utils/ScrollToTop';
+import { scrollToTop } from '../utils/scrollToTop';
 
 export const Photos = () => {
 	const [photos, id, pathsArray] = usePhotos();
