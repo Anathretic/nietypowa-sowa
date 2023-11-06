@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FiChevronsRight } from 'react-icons/fi';
+import { scrollToTop } from '../utils/ScrollToTop';
 
 export const CardItem = ({ id, path, title }) => {
 	return (
@@ -9,7 +10,8 @@ export const CardItem = ({ id, path, title }) => {
 					{path && (
 						<Link
 							className='w-10 h-10 rounded-full border-2 border-white flex justify-center items-center text-white cursor-pointer hover:bg-[#ff91d8] transition duration-300'
-							to={`${path}`}>
+							to={`${path}`}
+							onClick={scrollToTop}>
 							<FiChevronsRight fontSize={24} />
 						</Link>
 					)}
