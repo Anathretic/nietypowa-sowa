@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import CookieConsent from 'react-cookie-consent';
-import { scrollToTop } from '../utils/ScrollToTop';
+import { scrollToTop } from '../utils/scrollToTop';
 
 export const CookieBaner = ({ ...otherProps }) => {
 	return (
