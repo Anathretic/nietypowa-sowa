@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import CookieConsent from 'react-cookie-consent';
+import { scrollToTop } from '../utils/ScrollToTop';
 
 export const CookieBaner = ({ ...otherProps }) => {
 	return (
@@ -27,7 +28,7 @@ export const CookieBaner = ({ ...otherProps }) => {
 			{...otherProps}>
 			<p className='max-[300px]:p-3 p-1'>
 				Ta strona używa plików cookie wyłącznie w celach technicznych (np. google reCaptcha). Dowiedz się więcej z{' '}
-				<Link to='/privacy-policy' className='text-amber-300 underline'>
+				<Link to='/polityka-prywatnosci' onClick={scrollToTop} className='text-amber-300 underline'>
 					polityki prywatności
 				</Link>
 				.

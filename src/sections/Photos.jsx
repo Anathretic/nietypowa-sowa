@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { usePhotos } from '../hooks/usePhotos';
 import PageNotFound from './PageNotFound';
+import { scrollToTop } from '../utils/ScrollToTop';
 
 export const Photos = () => {
 	const [photos, id, pathsArray] = usePhotos();
@@ -38,6 +39,7 @@ export const Photos = () => {
 							<div className='flex flex-row justify-center items-center'>
 								<Link
 									to='/oferta'
+									onClick={scrollToTop}
 									className='flex justify-center items-center mt-10 bg-[#ff91d8] p-3 w-32 sm:w-56 md:w-96 md:text-lg rounded-full cursor-pointer hover:bg-[#bf589a] transition duration-300 text-white'>
 									Cofnij
 								</Link>
