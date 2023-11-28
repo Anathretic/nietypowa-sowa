@@ -8,18 +8,10 @@
 	box-sizing: border-box;
 }
 
-html {
-	overflow-x: hidden;
-}
-
 body {
 	font-family: 'Mulish', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-nav {
-	letter-spacing: 2px;
 }
 
 .wrapper {
@@ -28,11 +20,7 @@ nav {
 	max-width: 1920px;
 }
 
-.special-title {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
+.title-font {
 	font-family: 'Dancing Script', cursive;
 }
 
@@ -48,6 +36,23 @@ nav {
 	background-image: linear-gradient(142deg, rgb(216, 216, 216) 0%, rgb(190, 190, 190) 50%, rgb(206, 206, 206) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.white-gradient {
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 16px;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.blue-gradient {
+	background: rgba(51, 115, 198, 0.664);
+	border-radius: 16px;
+	box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .card {
@@ -75,43 +80,20 @@ nav {
 	background-image: url('/src/images/third-technique-img.jpg');
 }
 
-.blue-gradient {
-	background: rgba(51, 115, 198, 0.664);
-	border-radius: 16px;
-	box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.2);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.white-gradient {
-	background: rgba(255, 255, 255, 0.05);
-	border-radius: 16px;
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 .active {
 	color: #ff91d8;
 }
 
 form span {
-	display: none;
-	padding: 3px;
-	color: #ff91d8;
+	visibility: hidden;
 }
 
 form input:invalid[focused='true'] ~ span,
 form textarea:invalid[focused='true'] ~ span {
-	display: block;
+	visibility: visible;
 }
 
 form input:invalid[focused='true'],
 form textarea:invalid[focused='true'] {
 	border: 1px solid #ff91d8;
-}
-
-.date-span {
-	margin: 0 3px;
 }

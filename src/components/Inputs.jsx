@@ -8,7 +8,7 @@ export const FormInput = ({ label, htmlFor, onChange, errorMessage, ...inputProp
 				{label}:
 			</label>
 			<input className={`${inputStyles}`} onChange={onChange} autoComplete='off' {...inputProps} />
-			<span className='text-center'>{errorMessage}</span>
+			<span className='text-center h-8 rrsm:h-4 text-[#ff91d8]'>{errorMessage}</span>
 		</div>
 	);
 };
@@ -27,7 +27,7 @@ export const FormTextarea = ({ label, htmlFor, onChange, errorMessage, ...textar
 				autoComplete='off'
 				{...textareaProps}
 			/>
-			<span className='text-center'>{errorMessage}</span>
+			<span className='text-center h-8 rrsm:h-4 text-[#ff91d8]'>{errorMessage}</span>
 		</div>
 	);
 };

@@ -12,18 +12,18 @@ export const Photos = () => {
 				<div className='flex w-full justify-center items-center pt-[80px]'>
 					<div className='flex mf:flex-row flex-col items-center justify-center md:p-20 py-12 px-4 min-h-screen'>
 						<div className='wrapper'>
-							<h2 className='special-title text-5xl rsm:text-6xl mf:text-7xl text-white capitalize py-10'>{id}</h2>
+							<h2 className='title-font text-center text-5xl rsm:text-6xl mf:text-7xl text-white capitalize py-10'>{id}</h2>
 							<div className='flex items-center justify-center flex-col w-full max-w-[700px] text-white'>
 								{photos.map(data => (
-									<div key={data.imageId} className='py-12'>
+									<div key={data.imageId} className='py-12 w-full'>
 										<img src={data.image} alt={data.alt} className='rounded-2xl shadow-2xl shadow-neutral-800 w-full' />
-										<div className='text-center'>
-											<h3 className='pt-12 pb-8 text-2xl lg:text-3xl font-bold'>
+										<div className='text-center mt-12 py-10 px-5 white-gradient'>
+											<h3 className='pb-8 text-2xl font-bold'>
 												<span className='hidden sm:inline'>•</span> {data.title}{' '}
 												<span className='hidden sm:inline'>•</span>
 											</h3>
-											<p className='pb-6 lg:text-lg'>{data.description}</p>
-											<div className='flex items-center justify-center flex-col lg:text-lg'>
+											<p className='pb-6'>{data.description}</p>
+											<div className='flex items-center justify-center flex-col'>
 												{data.size && (
 													<span className='pb-6'>
 														<b>Wymiary: </b>

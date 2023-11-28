@@ -5,7 +5,7 @@ const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<div className='w-full flex md:justify-center justify-between items-center flex-col p-4 text-white'>
+		<footer className='w-full flex md:justify-center justify-between items-center flex-col p-4 text-white'>
 			<div className='sm:w-[90%] w-full h-[1px] bg-gray-400 mt-20' />
 			<div className='sm:w-[90%] w-full flex justify-between items-center my-5'>
 				<div className='flex'>
@@ -22,7 +22,7 @@ const Footer = () => {
 					</a>
 				</div>
 			</div>
-		</div>
+		</footer>
 	);
 };
 
