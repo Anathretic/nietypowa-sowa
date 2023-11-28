@@ -5,11 +5,12 @@ module.exports = {
 	theme: {
 		extend: {
 			screens: {
+				rrsm: '315px',
 				rsm: '350px',
 				mf: '990px',
 			},
 			backgroundImage: {
-				'hero-img': "url(/src/images/hero-bg.jpg)"
+				'hero-img': 'url(/src/images/hero-bg.jpg)',
 			},
 			keyframes: {
 				'slide-in': {
@@ -31,4 +32,4 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-}
+};

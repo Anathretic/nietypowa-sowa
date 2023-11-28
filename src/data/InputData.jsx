@@ -15,7 +15,7 @@ export const InputData = [
 		type: 'email',
 		placeholder: 'Wprowadź swój e-mail..',
 		label: 'E-mail',
-		errorMessage: 'Wprowadź poprawnie adres e-mail!',
+		errorMessage: 'Wprowadź poprawnie e-mail!',
 		required: true,
 	},
 	{

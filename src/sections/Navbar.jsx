@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { NavbarItem } from '../components/NavbarItem';
+import NavLogo from '/nietypowa-nav-logo.png';
 
 const navbarItems = [
 	{
@@ -30,11 +31,11 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className='absolute top-0 w-screen h-[80px] flex md:justify-center justify-between items-center p-4 mf:p-2 z-10 transition duration-300'>
+		<nav className='absolute top-0 w-full h-[80px] flex md:justify-center justify-between items-center py-4 mf:py-2 z-10 transition duration-300 mr-auto tracking-widest'>
 			<div className='md:flex-[0.8] 2xl:flex-[0.5] flex-initial justify-center items-center'>
 				<div className='flex items-center mf:mx-2'>
 					<img
-						src='/nietypowa-logo.png'
+						src={NavLogo}
 						alt='Logo odświeżające stronę'
 						className='cursor-pointer sm:p-2 mf:p-0'
 						onClick={handleLogo}
