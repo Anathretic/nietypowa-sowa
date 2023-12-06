@@ -15,7 +15,7 @@ import { useContactFormInputs } from '../hooks/useContactFormInputs';
 const Contact = () => {
 	const [focused, setFocused] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
-	const [errorValue, setErrorValue] = useState('');
+	const [recaptchaErrorValue, setRecaptchaErrorValue] = useState('');
 
 	const [values, setValues, handleInputValue] = useContactFormInputs();
 	const [buttonText, setButtonText] = useContactFormButton();
@@ -27,7 +27,7 @@ const Contact = () => {
 		e.preventDefault();
 
 		setIsLoading(true);
-		setErrorValue('');
+		setRecaptchaErrorValue('');
 		const token = await refCaptcha.current.getValue();
 		refCaptcha.current.reset();
 
@@ -50,7 +50,7 @@ const Contact = () => {
 						setButtonText(<BsCheck2All color='#3373c6' fontSize={24} />);
 					},
 					function () {
-						setErrorValue('Coś poszło nie tak..');
+						setRecaptchaErrorValue('Coś poszło nie tak..');
 					}
 				)
 				.finally(() => {
@@ -60,7 +60,7 @@ const Contact = () => {
 			return sendMsg;
 		} else {
 			setIsLoading(false);
-			setErrorValue('Nie bądź 🤖!');
+			setRecaptchaErrorValue('Nie bądź 🤖!');
 		}
 	};
 
@@ -111,23 +111,25 @@ const Contact = () => {
 								focused={focused.toString()}
 							/>
 						))}
-						<div className={`${isMobile ? 'h-32' : 'h-20'} mt-6 md:ml-0.5 ml-1.5`}>
+						<div className={`${isMobile ? 'h-42' : 'h-30'} mt-6 md:ml-0.5 ml-1.5`}>
 							<ReCAPTCHA
 								key={isMobile ? 'compact-recaptcha' : 'normal-recaptcha'}
 								size={isMobile ? 'compact' : 'normal'}
 								sitekey={import.meta.env.VITE_SITE_KEY}
 								ref={refCaptcha}
 							/>
+							<div className={`${isMobile ? 'h-12' : 'h-10'} flex items-center justify-center`}>
+							<p className='text-[#ff91d8] text-lg font-bold text-center'>{recaptchaErrorValue}</p>
 						</div>
-						<p className='mt-5 text-[#ff91d8] text-lg font-bold'>{errorValue}</p>
-						<div className='h-[1px] w-full bg-gray-400 mt-6' />
+						</div>
+						<div className='h-[1px] w-full bg-gray-400' />
 						<div className='flex justify-center items-center h-28'>
 							{isLoading ? (
 								<Loader />
 							) : (
 								<button
 									type='submit'
-									className='bg-[#ff91d8] p-3 w-32 rounded-full cursor-pointer hover:bg-[#bf589a] transition duration-300 text-white'>
+									className='flex justify-center bg-[#ff91d8] p-3 w-32 rounded-full cursor-pointer hover:bg-[#bf589a] transition duration-300 text-white'>
 									{buttonText}
 								</button>
 							)}

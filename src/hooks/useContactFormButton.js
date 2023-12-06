@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
-export const useContactFormButton = () => {
-	const [buttonText, setButtonText] = useState('Wyślij');
+const initialState = 'Wyślij';
 
-	const initialState = 'Wyślij';
+export const useContactFormButton = () => {
+	const [buttonText, setButtonText] = useState(initialState);
 
 	useEffect(() => {
-		if (buttonText !== initialState) {
+		if (buttonText) {
 			setTimeout(() => setButtonText(initialState), 2500);
 		}
 		return () => clearTimeout(buttonText);
