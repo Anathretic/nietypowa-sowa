@@ -87,7 +87,7 @@ const Contact = () => {
 					<form
 						onSubmit={handleSubmit}
 						className='px-5 py-2 sm:w-96 w-full flex flex-col justify-start items-center blue-gradient mt-10'>
-						<h2 className='p-5 text-2xl text-white text-gradient'>Napisz do mnie!</h2>
+						<h2 className='p-5 text-2xl text-white text-gradient text-center'>Napisz do mnie!</h2>
 						<div className='h-[1px] w-full bg-gray-400 my-1' />
 						{InputData.map(input => (
 							<FormInput
@@ -111,24 +111,27 @@ const Contact = () => {
 								focused={focused.toString()}
 							/>
 						))}
-						<ReCAPTCHA
-							key={isMobile ? 'compact-recaptcha' : 'normal-recaptcha'}
-							size={isMobile ? 'compact' : 'normal'}
-							className='mt-10 md:ml-0.5 ml-1.5'
-							sitekey={import.meta.env.VITE_SITE_KEY}
-							ref={refCaptcha}
-						/>
+						<div className={`${isMobile ? 'h-32' : 'h-20'} mt-6 md:ml-0.5 ml-1.5`}>
+							<ReCAPTCHA
+								key={isMobile ? 'compact-recaptcha' : 'normal-recaptcha'}
+								size={isMobile ? 'compact' : 'normal'}
+								sitekey={import.meta.env.VITE_SITE_KEY}
+								ref={refCaptcha}
+							/>
+						</div>
 						<p className='mt-5 text-[#ff91d8] text-lg font-bold'>{errorValue}</p>
 						<div className='h-[1px] w-full bg-gray-400 mt-6' />
-						{isLoading ? (
-							<Loader />
-						) : (
-							<button
-								type='submit'
-								className='flex flex-row justify-center items-center mt-5 mb-3 bg-[#ff91d8] p-3 w-32 rounded-full cursor-pointer hover:bg-[#bf589a] transition duration-300 text-white'>
-								{buttonText}
-							</button>
-						)}
+						<div className='flex justify-center items-center h-28'>
+							{isLoading ? (
+								<Loader />
+							) : (
+								<button
+									type='submit'
+									className='bg-[#ff91d8] p-3 w-32 rounded-full cursor-pointer hover:bg-[#bf589a] transition duration-300 text-white'>
+									{buttonText}
+								</button>
+							)}
+						</div>
 					</form>
 				</div>
 			</div>
