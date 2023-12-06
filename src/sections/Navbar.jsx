@@ -37,7 +37,7 @@ const Navbar = () => {
 					<img
 						src={NavLogo}
 						alt='Logo odświeżające stronę'
-						className='cursor-pointer sm:p-2 mf:p-0'
+						className='cursor-pointer p-2 mf:p-0'
 						onClick={handleLogo}
 					/>
 				</div>
