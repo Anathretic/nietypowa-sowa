@@ -119,8 +119,8 @@ const Contact = () => {
 								ref={refCaptcha}
 							/>
 							<div className={`${isMobile ? 'h-12' : 'h-10'} flex items-center justify-center`}>
-							<p className='text-[#ff91d8] text-lg font-bold text-center'>{recaptchaErrorValue}</p>
-						</div>
+								<p className='text-[#ff91d8] text-lg font-bold text-center'>{recaptchaErrorValue}</p>
+							</div>
 						</div>
 						<div className='h-[1px] w-full bg-gray-400' />
 						<div className='flex justify-center items-center h-28'>
