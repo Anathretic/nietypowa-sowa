@@ -111,14 +111,14 @@ const Contact = () => {
 								focused={focused.toString()}
 							/>
 						))}
-						<div className={`${isMobile ? 'h-42' : 'h-30'} mt-6 md:ml-0.5 ml-1.5`}>
+						<div className={`${isMobile ? 'h-42' : 'h-32'} mt-7 md:ml-0.5 ml-1.5`}>
 							<ReCAPTCHA
 								key={isMobile ? 'compact-recaptcha' : 'normal-recaptcha'}
 								size={isMobile ? 'compact' : 'normal'}
 								sitekey={import.meta.env.VITE_SITE_KEY}
 								ref={refCaptcha}
 							/>
-							<div className={`${isMobile ? 'h-12' : 'h-10'} flex items-center justify-center`}>
+							<div className={`${isMobile ? 'h-12' : 'h-10 mt-1'} flex items-center justify-center`}>
 								<p className='text-[#ff91d8] text-lg font-bold text-center'>{recaptchaErrorValue}</p>
 							</div>
 						</div>
