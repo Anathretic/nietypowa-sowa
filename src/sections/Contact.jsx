@@ -111,7 +111,7 @@ const Contact = () => {
 								focused={focused.toString()}
 							/>
 						))}
-						<div className={`${isMobile ? 'h-42' : 'h-32'} mt-7 md:ml-0.5 ml-1.5`}>
+						<div className={`${isMobile ? 'h-48' : 'h-32'} mt-7 md:ml-0.5 ml-1.5`}>
 							<ReCAPTCHA
 								key={isMobile ? 'compact-recaptcha' : 'normal-recaptcha'}
 								size={isMobile ? 'compact' : 'normal'}
@@ -123,7 +123,7 @@ const Contact = () => {
 							</div>
 						</div>
 						<div className='h-[1px] w-full bg-gray-400' />
-						<div className='flex justify-center items-center h-28'>
+						<div className='flex justify-center items-center h-28 mt-2'>
 							{isLoading ? (
 								<Loader />
 							) : (
