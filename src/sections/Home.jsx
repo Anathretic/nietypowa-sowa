@@ -6,7 +6,7 @@ const Home = () => {
 	const isLogoVisible = useMediaQuery({ query: '(min-height: 400px)' });
 
 	return (
-		<header className='h-screen w-100 bg-hero-img bg-center bg-cover'>
+		<div className='h-screen w-100 bg-hero-img bg-center bg-cover'>
 			<div className='flex justify-center items-center flex-col h-full'>
 				{isLogoVisible && <img src={Logo} alt='Logo' className='mb-8' />}
 				<h1 className='title-font text-center text-5xl rsm:text-6xl mf:text-7xl xl:text-8xl text-white'>
@@ -18,7 +18,7 @@ const Home = () => {
 					Rozpocznij
 				</Link>
 			</div>
-		</header>
+		</div>
 	);
 };
 
