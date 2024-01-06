@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Outlet, Route, Routes } from 'react-router-dom';
 import { Navbar, Offer, Footer, Contact, PageNotFound, PrivacyPolicy, Home } from './sections';
 import { CookieBaner } from './components/CookieBaner';
 import { Photos } from './sections/Photos';
@@ -9,66 +9,30 @@ const App = () => {
 			<div className='bg-gradient'>
 				<Routes>
 					<Route
-						path='/'
 						element={
 							<>
-								<Home />
+								<Outlet />
+								<CookieBaner />
 							</>
-						}
-					/>
-					<Route
-						path='/oferta'
-						element={
-							<>
-								<Navbar />
-								<Offer />
-								<Footer />
-							</>
-						}
-					/>
-					<Route
-						path='/oferta/:id'
-						element={
-							<>
-								<Navbar />
-								<Photos />
-								<Footer />
-							</>
-						}
-					/>
-					<Route
-						path='/kontakt'
-						element={
-							<>
-								<Navbar />
-								<Contact />
-								<Footer />
-							</>
-						}
-					/>
-					<Route
-						path='/polityka-prywatnosci'
-						element={
-							<>
-								<Navbar />
-								<PrivacyPolicy />
-								<Footer />
-							</>
-						}
-					/>
-					<Route
-						path='*'
-						element={
-							<>
-								<Navbar />
-								<PageNotFound />
-								<Footer />
-							</>
-						}
-					/>
+						}>
+						<Route path='/' element={<Home />} />
+						<Route
+							element={
+								<>
+									<Navbar />
+									<Outlet />
+									<Footer />
+								</>
+							}>
+							<Route path='/oferta' element={<Offer />} />
+							<Route path='/oferta/:id' element={<Photos />} />
+							<Route path='/kontakt' element={<Contact />} />
+							<Route path='/polityka-prywatnosci' element={<PrivacyPolicy />} />
+							<Route path='*' element={<PageNotFound />} />
+						</Route>
+					</Route>
 				</Routes>
 			</div>
-			<CookieBaner />
 		</div>
 	);
 };
