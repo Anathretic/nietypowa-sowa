@@ -6,10 +6,11 @@ export const useContactFormButton = () => {
 	const [buttonText, setButtonText] = useState(initialState);
 
 	useEffect(() => {
+		let buttonTimeout;
 		if (buttonText !== initialState) {
-			setTimeout(() => setButtonText(initialState), 2500);
+			buttonTimeout = setTimeout(() => setButtonText(initialState), 2500);
 		}
-		return () => clearTimeout(buttonText);
+		return () => clearTimeout(buttonTimeout);
 	}, [buttonText]);
 
 	return [buttonText, setButtonText];
