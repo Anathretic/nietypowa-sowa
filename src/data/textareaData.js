@@ -1,4 +1,4 @@
-export const TextareaData = [
+export const textareaData = [
 	{
 		id: 'message',
 		name: 'message',
