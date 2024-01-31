@@ -1,4 +1,4 @@
-export const CardData = [
+export const cardData = [
 	{
 		id: 1,
 		path: 'rysunek',

@@ -1,4 +1,4 @@
-export const InputData = [
+export const inputData = [
 	{
 		id: 'username',
 		name: 'username',

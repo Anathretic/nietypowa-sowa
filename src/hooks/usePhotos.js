@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
-import { CardData } from '../data/CardData';
+import { cardData } from '../data/cardData';
 
 export const usePhotos = () => {
 	const [photos, setPhotos] = useState([]);
 	const { id } = useParams();
-	const pathsArray = CardData.map(data => data.path).join(', ');
+	const pathsArray = cardData.map(data => data.path).join(', ');
 
 	useEffect(() => {
-		CardData.find(data => {
+		cardData.find(data => {
 			if (data.path === id) {
 				setPhotos(data.photoArray);
 			}
