@@ -4,7 +4,7 @@ import PageNotFound from './PageNotFound';
 import { scrollToTop } from '../utils/scrollToTopUtils';
 
 export const Photos = () => {
-	const [photos, id, pathsArray] = usePhotos();
+	const [photos, specialText, id, pathsArray] = usePhotos();
 
 	return (
 		<>
@@ -12,7 +12,16 @@ export const Photos = () => {
 				<div className='flex w-full justify-center items-center pt-[80px]'>
 					<div className='flex mf:flex-row flex-col items-center justify-center md:p-20 py-12 px-4 min-h-screen'>
 						<div className='wrapper'>
-							<h2 className='title-font text-center text-5xl rsm:text-6xl mf:text-7xl text-white capitalize py-10'>{id}</h2>
+							<h2 className='title-font text-center text-5xl rsm:text-6xl mf:text-7xl text-white capitalize pt-10'>
+								{id}
+							</h2>
+							<div className='flex items-center justify-center flex-col w-full max-w-[700px] text-white text-center mt-12 py-10 px-5 mb-12 white-gradient'>
+								{specialText.map(string => (
+									<p key={string} className='p-4'>
+										{string}
+									</p>
+								))}
+							</div>
 							<div className='flex items-center justify-center flex-col w-full max-w-[700px] text-white'>
 								{photos.map(data => (
 									<div key={data.imageId} className='py-12 w-full'>
@@ -30,7 +39,7 @@ export const Photos = () => {
 														{data.size}
 													</span>
 												)}
-												<span className='font-bold'>Stworzono w {data.year} roku.</span>
+												{data.year && <span className='font-bold'>Stworzono w {data.year} roku.</span>}
 											</div>
 										</div>
 									</div>

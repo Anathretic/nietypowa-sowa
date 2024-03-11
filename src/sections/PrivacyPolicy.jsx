@@ -47,7 +47,7 @@ const PrivacyPolicy = () => {
 					</a>
 				</p>
 				<p className='font-light'>
-					Kod oraz małe poprawki graficzne:{' '}
+					Kod, tekst oraz małe poprawki graficzne:{' '}
 					<a
 						className='font-bold hover:text-[#ff91d8] transition duration-300'
 						href='https://konrad-wojtylo.com/'
