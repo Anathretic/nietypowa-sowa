@@ -4,6 +4,7 @@ import { cardData } from '../data/cardData';
 
 export const usePhotos = () => {
 	const [photos, setPhotos] = useState([]);
+	const [specialText, setSpecialText] = useState([]);
 	const { id } = useParams();
 	const pathsArray = cardData.map(data => data.path).join(', ');
 
@@ -11,9 +12,10 @@ export const usePhotos = () => {
 		cardData.find(data => {
 			if (data.path === id) {
 				setPhotos(data.photoArray);
+				setSpecialText(data.specialText);
 			}
 		});
 	}, []);
 
-	return [photos, id, pathsArray];
+	return [photos, specialText, id, pathsArray];
 };

@@ -69,15 +69,15 @@ body {
 }
 
 .card-1 {
-	background-image: url('/src/images/first-technique-img.jpg');
+	background-image: url('/src/images//paintings-card.jpg');
 }
 
 .card-2 {
-	background-image: url('/src/images/second-technique-img.jpg');
+	background-image: url('/src/images/shoes-card.jpg');
 }
 
 .card-3 {
-	background-image: url('/src/images/third-technique-img.jpg');
+	background-image: url('/src/images/bookmarks-card.jpg');
 }
 
 .active {
