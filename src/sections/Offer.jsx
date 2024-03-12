@@ -1,7 +1,18 @@
 import { CardItem } from '../components/CardItem';
-import { cardData } from '../data/cardData';
+import { useEffect, useState } from 'react';
+import { DataHandler } from '../helpers/getDataHelper';
 
 const Offer = () => {
+	const [offerData, setOfferData] = useState([]);
+	const [cardLoading, setCardLoading] = useState(true);
+
+	useEffect(() => {
+		DataHandler().then(res => {
+			setOfferData(res.offer);
+			setCardLoading(false);
+		});
+	}, []);
+
 	return (
 		<div className='flex w-full justify-center items-center pt-[80px]'>
 			<div className='flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4'>
@@ -13,11 +24,15 @@ const Offer = () => {
 						<p className='my-2 text-gradient italic'>~ Rainbow Rowell</p>
 					</div>
 				</div>
-				<div className='flex flex-col flex-1 items-center justify-start w-full sm:w-96 mf:mt-0 mf:ml-18 lg:ml-20 mt-10'>
-					{cardData.map(data => (
-						<CardItem key={data.id + data.title} id={data.id} path={data.path} title={data.title} />
-					))}
-				</div>
+				{cardLoading ? (
+					<div className='min-h-screen'>Ładowanie..</div>
+				) : (
+					<div className='flex flex-col flex-1 items-center justify-start w-full sm:w-96 mf:mt-0 mf:ml-18 lg:ml-20 mt-10'>
+						{offerData.map(data => (
+							<CardItem key={data.id + data.title} id={data.id} path={data.path} title={data.title} />
+						))}
+					</div>
+				)}
 			</div>
 		</div>
 	);
