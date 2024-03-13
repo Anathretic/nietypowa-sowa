@@ -3,15 +3,17 @@ import { Link, useParams } from 'react-router-dom';
 import { scrollToTop } from '../utils/scrollToTopUtils';
 import { DataHandler } from '../helpers/getDataHelper';
 import PageNotFound from './PageNotFound';
+import { ContentLoader } from '../components/ContentLoader';
 
 const createdCategories = ['zakładki', 'buty', 'obrazy'];
 
-export const Photos = () => {
+const OfferCategory = () => {
 	const [data, setData] = useState({});
 	const [loading, setLoading] = useState(true);
 	const { id } = useParams();
 
 	useEffect(() => {
+		let loadingTimeout;
 		DataHandler()
 			.then(res => {
 				res.offer.find(data => {
@@ -19,8 +21,11 @@ export const Photos = () => {
 				});
 			})
 			.finally(() => {
-				setLoading(false);
+				setTimeout(() => {
+					setLoading(false);
+				}, 1000);
 			});
+		return clearTimeout(loadingTimeout);
 	}, []);
 
 	return (
@@ -30,7 +35,7 @@ export const Photos = () => {
 					<div className='flex mf:flex-row flex-col items-center justify-center md:p-20 py-12 px-4 min-h-screen'>
 						<div className='wrapper'>
 							{loading ? (
-								<div>Ładowanie..</div>
+								<ContentLoader />
 							) : (
 								<>
 									<h2 className='title-font text-center text-5xl rsm:text-6xl mf:text-7xl text-white capitalize pt-10'>
@@ -89,3 +94,5 @@ export const Photos = () => {
 		</>
 	);
 };
+
+export default OfferCategory;
