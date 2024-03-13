@@ -1,7 +1,8 @@
 export const DataHandler = async () => {
 	// eslint-disable-next-line no-async-promise-executor
 	return new Promise(async (res, rej) => {
-		const response = await fetch(`http://localhost:5173/data.json`, {
+		const url = import.meta.env.VITE_URL_ADDRESS;
+		const response = await fetch(url + 'data.json', {
 			headers: {
 				'Content-Type': 'application/json',
 			},
