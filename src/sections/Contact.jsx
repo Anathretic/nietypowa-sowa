@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import { inputData } from '../inputsConfig/inputData';
 import { textareaData } from '../inputsConfig/textareaData';
 import { FormInput, FormTextarea } from '../components/Inputs';
-import { Loader } from '../components/Loader';
+import { FormLoader } from '../components/FormLoader';
 import { BsCheck2All } from 'react-icons/bs';
 import { useContactFormButton } from '../hooks/useContactFormButton';
 import { useContactFormInputs } from '../hooks/useContactFormInputs';
@@ -123,7 +123,7 @@ const Contact = () => {
 						<div className='h-[1px] w-full bg-gray-400' />
 						<div className='flex justify-center items-center h-28 mt-2'>
 							{isLoading ? (
-								<Loader />
+								<FormLoader />
 							) : (
 								<button
 									type='submit'

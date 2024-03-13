@@ -1,7 +1,6 @@
 import { Outlet, Route, Routes } from 'react-router-dom';
-import { Navbar, Offer, Footer, Contact, PageNotFound, PrivacyPolicy, Home } from './sections';
+import { Navbar, Offer, Footer, Contact, PageNotFound, PrivacyPolicy, Home, OfferCategory } from './sections';
 import { CookieBaner } from './components/CookieBaner';
-import { Photos } from './sections/Photos';
 
 const App = () => {
 	return (
@@ -25,7 +24,7 @@ const App = () => {
 								</>
 							}>
 							<Route path='/oferta' element={<Offer />} />
-							<Route path='/oferta/:id' element={<Photos />} />
+							<Route path='/oferta/:id' element={<OfferCategory />} />
 							<Route path='/kontakt' element={<Contact />} />
 							<Route path='/polityka-prywatnosci' element={<PrivacyPolicy />} />
 							<Route path='*' element={<PageNotFound />} />
