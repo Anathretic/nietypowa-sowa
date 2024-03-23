@@ -14,6 +14,10 @@ const navbarItems = [
 		section: '/oferta',
 	},
 	{
+		title: 'cennik',
+		section: '/cennik',
+	},
+	{
 		title: 'kontakt',
 		section: '/kontakt',
 	},
