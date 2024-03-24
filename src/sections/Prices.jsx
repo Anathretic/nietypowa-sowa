@@ -5,8 +5,8 @@ const pricesArrayHead = [{ title: 'Usługa' }, { title: 'Cena' }];
 
 const pricesArrayBody = [
 	{ service: 'Zakładka', price: '20' },
-	{ service: 'Buty*', price: '200-400' },
-	{ service: 'Obraz*', price: '150-350' },
+	{ service: 'Buty*', price: '200+' },
+	{ service: 'Obraz*', price: '150+' },
 	{ service: 'Brelok', price: '20' },
 ];
 
@@ -27,23 +27,28 @@ const Prices = () => {
 						{pricesArrayBody.map(data => (
 							<tr className='flex w-full justify-between md:text-base md:px-4 py-2' key={data.service + data.price}>
 								<td className='p-4 px-5 text-left'>{data.service}</td>
-								<td className='p-4 px-5 text-right'>{data.price}zł</td>
+								<td className='p-4 px-5 text-right'>{data.price} zł</td>
 							</tr>
 						))}
 					</tbody>
 				</table>
 				<span className='p-4 py-12 text-white text-center text-sm'>
-					*Podane ceny są umowne ze względu na to, że każdy klient ma własne preferencje co do obrazu, jaki chciałby
-					otrzymać. Dodatkowo w skład ceny wchodzi rozmiar obrazu - przekłada się to na zużycie materiałów potrzebnych
-					do jego wykonania oraz zasobów czasu.
+					*Podane ceny są umowne ze względu na to, że każdy klient ma własne preferencje co do produktu, jaki chciałby
+					otrzymać. Dodatkowo w skład ceny wchodzi np. rozmiar obrazu - przekłada się to na zużycie materiałów
+					potrzebnych do jego wykonania oraz zasobów czasu.
 				</span>
 				<Link
 					to='/kontakt'
-					className='mt-8 text-lg flex justify-center bg-[#ff91d8] p-3 w-56 md:w-64 lg:w-72 rounded-full cursor-pointer hover:bg-[#bf589a] transition duration-300 text-white' onClick={() => {
-						scrollToTop()
+					className='mt-8 text-lg flex justify-center bg-[#ff91d8] p-3 w-56 md:w-64 lg:w-72 rounded-full cursor-pointer hover:bg-[#bf589a] transition duration-300 text-white'
+					onClick={() => {
+						scrollToTop();
 					}}>
 					Zamów
 				</Link>
+				<p className='p-4 pt-12 text-white text-center text-md lg:text-lg'>
+					Kliknij powyższy przycisk, aby złożyć u mnie swoje zamówienie poprzez formularz! Pamiętaj by w wiadomości
+					podać chociaż uproszczoną wizję tego, co dokładnie byś chciał.
+				</p>
 			</div>
 		</div>
 	);

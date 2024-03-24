@@ -71,14 +71,12 @@ const Contact = () => {
 			<div className='flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4'>
 				<div className='flex flex-1 justify-center items-center flex-col mf:ml-2'>
 					<h2 className='text-4xl sm:text-5xl text-white text-gradient py-1 max-rsm:text-left text-center mf:text-left'>
-						Chciałbyś dowiedzieć się <br /> jak pracuję?
-						<br />
-						A może.. <br /> interesuje Cię <br /> indywidualny projekt?
+						Chciałbyś zamówić coś <br /> dla siebie? <br />
+						A może.. <br /> interesuje Cię to <br /> jak wykonuję swoją pracę?
 					</h2>
 					<div className='text-left mt-5 text-white font-light text-base max-[350px]:text-left text-center mf:text-left'>
-						<p className='mt-2'>Spotkajmy się w mojej pracowni!</p>
 						<br />
-						<p className='mb-2'>Pamiętaj tylko, aby najpierw umówić się ze mną przez formularz!</p>
+						<p className='mb-2'>Wypełnij formularz, a ja na pewno się odezwę i dogadamy wszystkie szczegóły!</p>
 					</div>
 				</div>
 				<div className='flex flex-col flex-1 items-center justify-start w-full sm:w-96 mf:mt-0 mf:ml-18 lg:ml-20 mt-10'>
