@@ -1,5 +1,8 @@
 import { Outlet, Route, Routes } from 'react-router-dom';
-import { Navbar, Offer, Footer, Contact, PageNotFound, PrivacyPolicy, Home, OfferCategory, Prices } from './sections';
+import { Home, Blog, Offer, Shop, Quote, Contact, PrivacyPolicy, PageNotFound } from './pages';
+import { Navbar } from './components/sections/Navbar';
+import { Footer } from './components/sections/Footer';
+import { OfferCategory } from './components/sections/OfferCategory';
 import { CookieBaner } from './components/CookieBaner';
 
 const App = () => {
@@ -23,9 +26,11 @@ const App = () => {
 									<Footer />
 								</>
 							}>
+							<Route path='/blog' element={<Blog />} />
 							<Route path='/oferta' element={<Offer />} />
 							<Route path='/oferta/:id' element={<OfferCategory />} />
-							<Route path='/cennik' element={<Prices />} />
+							<Route path='/sklep' element={<Shop />} />
+							<Route path='/wycena' element={<Quote />} />
 							<Route path='/kontakt' element={<Contact />} />
 							<Route path='/polityka-prywatnosci' element={<PrivacyPolicy />} />
 							<Route path='*' element={<PageNotFound />} />
