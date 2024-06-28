@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { scrollToTop } from '../utils/scrollToTopUtils';
-import { DataHandler } from '../helpers/getDataHelper';
-import PageNotFound from './PageNotFound';
-import { ContentLoader } from '../components/ContentLoader';
+import { PageNotFound } from '../../pages';
+import { ContentLoader } from '../ContentLoader';
+import { scrollToTop } from '../../utils/scrollToTopUtils';
+import { DataHandler } from '../../helpers/getDataHelper';
 
 const createdCategories = ['zakładki', 'buty', 'obrazy'];
 
-const OfferCategory = () => {
+export const OfferCategory = () => {
 	const [data, setData] = useState({});
 	const [loading, setLoading] = useState(true);
 	const { id } = useParams();
@@ -94,5 +94,3 @@ const OfferCategory = () => {
 		</>
 	);
 };
-
-export default OfferCategory;

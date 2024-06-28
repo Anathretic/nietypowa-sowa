@@ -13,7 +13,7 @@ const Home = () => {
 					Nietypowa Sowa
 				</h1>
 				<Link
-					to='/oferta'
+					to='/blog'
 					className='flex justify-center items-center mt-12 bg-[#ff91d8] p-3 w-40 sm:w-56 mf:w-96 md:text-lg rounded-full cursor-pointer hover:bg-[#bf589a] transition duration-300 text-white'>
 					Rozpocznij
 				</Link>

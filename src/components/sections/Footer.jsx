@@ -1,7 +1,8 @@
-import { BsInstagram } from 'react-icons/bs';
-import { FaRegCopyright } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FaInstagram, FaRegCopyright, FaBalanceScale } from 'react-icons/fa';
+import { scrollToTop } from '../../utils/scrollToTopUtils';
 
-const Footer = () => {
+export const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
 	return (
@@ -12,18 +13,22 @@ const Footer = () => {
 					<FaRegCopyright className='mx-1 h-auto' />
 					<p className='text-sm text-center mf:text-base uppercase'> {currentYear} nietypowa sowa</p>
 				</div>
-				<div className='flex flex-end '>
+				<div className='flex flex-end'>
 					<a
-						className='cursor-pointer p-1 hover:text-[#ff91d8] transition duration-300'
+						className='mr-4 sm:mr-6 cursor-pointer p-1 hover:text-[#ff91d8] transition duration-300'
 						href='https://www.instagram.com/nietypowa_sowa/'
 						target='_blank'
 						rel='noreferrer'>
-						<BsInstagram fontSize={22} />
+						<FaInstagram fontSize={24} />
 					</a>
+					<Link
+						to='/polityka-prywatnosci'
+						className='p-1 hover:text-[#ff91d8] transition duration-300'
+						onClick={scrollToTop}>
+						<FaBalanceScale fontSize={24} />
+					</Link>
 				</div>
 			</div>
 		</footer>
 	);
 };
-
-export default Footer;

@@ -1,33 +1,33 @@
 import { useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { HiMenuAlt4 } from 'react-icons/hi';
-import { NavbarItem } from '../components/NavbarItem';
+import { NavbarItem } from '../NavbarItem';
 import NavLogo from '/nietypowa-nav-logo.png';
 
 const navbarItems = [
 	{
-		title: 'home',
-		section: '/',
+		title: 'blog',
+		section: '/blog',
 	},
 	{
 		title: 'oferta',
 		section: '/oferta',
 	},
 	{
-		title: 'cennik',
-		section: '/cennik',
+		title: 'sklep',
+		section: '/sklep',
+	},
+	{
+		title: 'wycena',
+		section: '/wycena',
 	},
 	{
 		title: 'kontakt',
 		section: '/kontakt',
 	},
-	{
-		title: 'prywatność',
-		section: '/polityka-prywatnosci',
-	},
 ];
 
-const Navbar = () => {
+export const Navbar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false);
 
 	const handleLogo = () => {
@@ -87,5 +87,3 @@ const Navbar = () => {
 		</header>
 	);
 };
-
-export default Navbar;
