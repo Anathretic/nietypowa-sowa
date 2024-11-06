@@ -1,9 +1,5 @@
 # Nietypowa Sowa
 
-## Attention!
-
-This is an old version of the code and site that is no longer supported and updated. To see the code for the latest version, [click me!](https://github.com/Anathretic/nietypowa-sowa-aerograf)
-
 ## About
 
 I would like to introduce you to one of my website commercial projects, where I built the whole thing using the React framework.
@@ -21,3 +17,7 @@ The code is refactored and divided into components and custom hooks.
 **Used:** HTML, CSS, JavaScript, React, Node + Express, Tailwind, Vite
 
 **Tools:** [EmailJS](https://www.emailjs.com/), [Google reCaptcha](https://www.google.com/recaptcha/about/)
+
+## Attention!
+
+This is an old version of the code and site that is no longer supported and updated. To see the code for the latest version, [click me!](https://github.com/Anathretic/nietypowa-sowa-aerograf)
